@@ -15,8 +15,10 @@ namespace Four_Vector_App
         public Main_window()
         {
             InitializeComponent();
+            //Matrix tester = new Matrix();
+            //tester.test01();
         }
-
+        
         private void textBox_numerical_KeyPress(object sender, KeyPressEventArgs e)
         {
             // https://stackoverflow.com/questions/463299/how-do-i-make-a-textbox-that-only-accepts-numbers

@@ -126,6 +126,7 @@
             // panel_lorentzresult
             // 
             this.panel_lorentzresult.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel_lorentzresult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_lorentzresult.Controls.Add(this.linkLabel_lorentz_reference);
             this.panel_lorentzresult.Controls.Add(this.label_betarange);
             this.panel_lorentzresult.Controls.Add(this.label_gammadescription);
@@ -214,7 +215,7 @@
             // 
             // textBox_gamma
             // 
-            this.textBox_gamma.Location = new System.Drawing.Point(337, 171);
+            this.textBox_gamma.Location = new System.Drawing.Point(342, 171);
             this.textBox_gamma.Multiline = true;
             this.textBox_gamma.Name = "textBox_gamma";
             this.textBox_gamma.ReadOnly = true;
@@ -226,7 +227,7 @@
             // 
             this.label_gamma.AutoSize = true;
             this.label_gamma.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_gamma.Location = new System.Drawing.Point(296, 156);
+            this.label_gamma.Location = new System.Drawing.Point(303, 154);
             this.label_gamma.Name = "label_gamma";
             this.label_gamma.Size = new System.Drawing.Size(38, 37);
             this.label_gamma.TabIndex = 5;
@@ -236,7 +237,7 @@
             // 
             this.label_beta.AutoSize = true;
             this.label_beta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_beta.Location = new System.Drawing.Point(301, 89);
+            this.label_beta.Location = new System.Drawing.Point(301, 98);
             this.label_beta.Name = "label_beta";
             this.label_beta.Size = new System.Drawing.Size(35, 37);
             this.label_beta.TabIndex = 4;
@@ -244,7 +245,7 @@
             // 
             // textBox_beta
             // 
-            this.textBox_beta.Location = new System.Drawing.Point(342, 89);
+            this.textBox_beta.Location = new System.Drawing.Point(342, 98);
             this.textBox_beta.Multiline = true;
             this.textBox_beta.Name = "textBox_beta";
             this.textBox_beta.Size = new System.Drawing.Size(65, 20);
@@ -275,7 +276,7 @@
             // 
             this.pictureBox_lorentzmatrix.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox_lorentzmatrix.Image = global::Four_Vector_App.Properties.Resources.lorentz_transform_matrix;
-            this.pictureBox_lorentzmatrix.Location = new System.Drawing.Point(18, 62);
+            this.pictureBox_lorentzmatrix.Location = new System.Drawing.Point(16, 62);
             this.pictureBox_lorentzmatrix.Name = "pictureBox_lorentzmatrix";
             this.pictureBox_lorentzmatrix.Size = new System.Drawing.Size(271, 129);
             this.pictureBox_lorentzmatrix.TabIndex = 0;
@@ -339,16 +340,17 @@
             // label_betadescription
             // 
             this.label_betadescription.AutoSize = true;
-            this.label_betadescription.Location = new System.Drawing.Point(300, 62);
+            this.label_betadescription.Location = new System.Drawing.Point(295, 62);
             this.label_betadescription.Name = "label_betadescription";
-            this.label_betadescription.Size = new System.Drawing.Size(115, 13);
+            this.label_betadescription.Size = new System.Drawing.Size(120, 26);
             this.label_betadescription.TabIndex = 14;
-            this.label_betadescription.Text = "Velocity relative to light";
+            this.label_betadescription.Text = "Ratio of relative velocity\r\n to speed of light";
+            this.label_betadescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_gammadescription
             // 
             this.label_gammadescription.AutoSize = true;
-            this.label_gammadescription.Location = new System.Drawing.Point(334, 156);
+            this.label_gammadescription.Location = new System.Drawing.Point(339, 156);
             this.label_gammadescription.Name = "label_gammadescription";
             this.label_gammadescription.Size = new System.Drawing.Size(72, 13);
             this.label_gammadescription.TabIndex = 15;
@@ -357,7 +359,7 @@
             // label_betarange
             // 
             this.label_betarange.AutoSize = true;
-            this.label_betarange.Location = new System.Drawing.Point(344, 115);
+            this.label_betarange.Location = new System.Drawing.Point(344, 124);
             this.label_betarange.Name = "label_betarange";
             this.label_betarange.Size = new System.Drawing.Size(58, 13);
             this.label_betarange.TabIndex = 16;
