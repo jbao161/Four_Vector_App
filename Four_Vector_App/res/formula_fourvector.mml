@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <semantics>
+  <mrow>
+   <mrow>
+    <msup>
+     <mi>X</mi>
+     <mo stretchy="false">μ</mo>
+    </msup>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <msup>
+       <mi>x</mi>
+       <mn>0</mn>
+      </msup>
+      <mi>,</mi>
+      <mtext> </mtext>
+      <msup>
+       <mi>x</mi>
+       <mn>1</mn>
+      </msup>
+      <mi>,</mi>
+      <mtext> </mtext>
+      <msup>
+       <mi>x</mi>
+       <mn>2</mn>
+      </msup>
+      <mi>,</mi>
+      <mtext> </mtext>
+      <msup>
+       <mi>x</mi>
+       <mn>3</mn>
+      </msup>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">X^%mu = (x^0 , &quot; &quot;x^1 , &quot; &quot;x^2 , &quot; &quot;x^3)</annotation>
+ </semantics>
+</math>
