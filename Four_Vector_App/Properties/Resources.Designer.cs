@@ -89,5 +89,15 @@ namespace Four_Vector_App.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lorentz_transformation_matrix_3d {
+            get {
+                object obj = ResourceManager.GetObject("lorentz transformation matrix 3d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

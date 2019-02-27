@@ -35,6 +35,16 @@
             this.textBox_x0 = new System.Windows.Forms.TextBox();
             this.pictureBox_formula_fourvector = new System.Windows.Forms.PictureBox();
             this.panel_lorentzresult = new System.Windows.Forms.Panel();
+            this.linkLabel_lorentz_reference = new System.Windows.Forms.LinkLabel();
+            this.label_betarange = new System.Windows.Forms.Label();
+            this.label_gammadescription = new System.Windows.Forms.Label();
+            this.label_betadescription = new System.Windows.Forms.Label();
+            this.panel_fourvector_boosted = new System.Windows.Forms.Panel();
+            this.textBox_x3_boosted = new System.Windows.Forms.TextBox();
+            this.textBox_x2_boosted = new System.Windows.Forms.TextBox();
+            this.textBox_x1_boosted = new System.Windows.Forms.TextBox();
+            this.textBox_x0_boosted = new System.Windows.Forms.TextBox();
+            this.pictureBox_fourvector_boosted = new System.Windows.Forms.PictureBox();
             this.button_lorentzboost = new System.Windows.Forms.Button();
             this.groupBox_boostdirection = new System.Windows.Forms.GroupBox();
             this.radioButton_boostz = new System.Windows.Forms.RadioButton();
@@ -48,24 +58,48 @@
             this.pictureBox_lorentzresult = new System.Windows.Forms.PictureBox();
             this.label_lorentz = new System.Windows.Forms.Label();
             this.pictureBox_lorentzmatrix = new System.Windows.Forms.PictureBox();
-            this.panel_fourvector_boosted = new System.Windows.Forms.Panel();
-            this.textBox_x3_boosted = new System.Windows.Forms.TextBox();
-            this.textBox_x2_boosted = new System.Windows.Forms.TextBox();
-            this.textBox_x1_boosted = new System.Windows.Forms.TextBox();
-            this.textBox_x0_boosted = new System.Windows.Forms.TextBox();
-            this.pictureBox_fourvector_boosted = new System.Windows.Forms.PictureBox();
-            this.label_betadescription = new System.Windows.Forms.Label();
-            this.label_gammadescription = new System.Windows.Forms.Label();
-            this.label_betarange = new System.Windows.Forms.Label();
-            this.linkLabel_lorentz_reference = new System.Windows.Forms.LinkLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label_boostdirection3d = new System.Windows.Forms.Label();
+            this.textBox_boostdirectionz3d = new System.Windows.Forms.TextBox();
+            this.textBox_boostdirectiony3d = new System.Windows.Forms.TextBox();
+            this.textBox_boostdirectionx3d = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_gamma3d = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_beta3d = new System.Windows.Forms.TextBox();
+            this.button_boost3d = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox_3dboosted_x3 = new System.Windows.Forms.TextBox();
+            this.textBox_3dboosted_x2 = new System.Windows.Forms.TextBox();
+            this.textBox_3dboosted_x1 = new System.Windows.Forms.TextBox();
+            this.textBox_3dboosted_x0 = new System.Windows.Forms.TextBox();
+            this.pictureBox_boosted3d = new System.Windows.Forms.PictureBox();
+            this.pictureBox_lorentztransform_3d = new System.Windows.Forms.PictureBox();
+            this.label_lorentz_3d = new System.Windows.Forms.Label();
+            this.panel_beta3d = new System.Windows.Forms.Panel();
+            this.label_beta3d = new System.Windows.Forms.Label();
+            this.textBox_betaz3d = new System.Windows.Forms.TextBox();
+            this.textBox_betay3d = new System.Windows.Forms.TextBox();
+            this.textBox_betax3d = new System.Windows.Forms.TextBox();
+            this.textBox_3dboostnormal_z = new System.Windows.Forms.TextBox();
+            this.textBox_3dboostnormal_y = new System.Windows.Forms.TextBox();
+            this.textBox_3dboostnormal_x = new System.Windows.Forms.TextBox();
+            this.label_boost3d_normalized = new System.Windows.Forms.Label();
             this.panel_fourvector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_formula_fourvector)).BeginInit();
             this.panel_lorentzresult.SuspendLayout();
+            this.panel_fourvector_boosted.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fourvector_boosted)).BeginInit();
             this.groupBox_boostdirection.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lorentzresult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lorentzmatrix)).BeginInit();
-            this.panel_fourvector_boosted.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fourvector_boosted)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_boosted3d)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lorentztransform_3d)).BeginInit();
+            this.panel_beta3d.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_fourvector
@@ -142,10 +176,104 @@
             this.panel_lorentzresult.Controls.Add(this.pictureBox_lorentzresult);
             this.panel_lorentzresult.Controls.Add(this.label_lorentz);
             this.panel_lorentzresult.Controls.Add(this.pictureBox_lorentzmatrix);
-            this.panel_lorentzresult.Location = new System.Drawing.Point(27, 81);
+            this.panel_lorentzresult.Location = new System.Drawing.Point(12, 57);
             this.panel_lorentzresult.Name = "panel_lorentzresult";
-            this.panel_lorentzresult.Size = new System.Drawing.Size(996, 335);
+            this.panel_lorentzresult.Size = new System.Drawing.Size(996, 324);
             this.panel_lorentzresult.TabIndex = 1;
+            // 
+            // linkLabel_lorentz_reference
+            // 
+            this.linkLabel_lorentz_reference.AutoSize = true;
+            this.linkLabel_lorentz_reference.Location = new System.Drawing.Point(680, 227);
+            this.linkLabel_lorentz_reference.Name = "linkLabel_lorentz_reference";
+            this.linkLabel_lorentz_reference.Size = new System.Drawing.Size(303, 13);
+            this.linkLabel_lorentz_reference.TabIndex = 17;
+            this.linkLabel_lorentz_reference.TabStop = true;
+            this.linkLabel_lorentz_reference.Text = "http://hyperphysics.phy-astr.gsu.edu/hbase/Relativ/vec4.html";
+            this.linkLabel_lorentz_reference.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_lorentz_reference_LinkClicked);
+            // 
+            // label_betarange
+            // 
+            this.label_betarange.AutoSize = true;
+            this.label_betarange.Location = new System.Drawing.Point(344, 124);
+            this.label_betarange.Name = "label_betarange";
+            this.label_betarange.Size = new System.Drawing.Size(58, 13);
+            this.label_betarange.TabIndex = 16;
+            this.label_betarange.Text = "(-1 < β < 1)";
+            // 
+            // label_gammadescription
+            // 
+            this.label_gammadescription.AutoSize = true;
+            this.label_gammadescription.Location = new System.Drawing.Point(339, 156);
+            this.label_gammadescription.Name = "label_gammadescription";
+            this.label_gammadescription.Size = new System.Drawing.Size(72, 13);
+            this.label_gammadescription.TabIndex = 15;
+            this.label_gammadescription.Text = "Lorentz factor";
+            // 
+            // label_betadescription
+            // 
+            this.label_betadescription.AutoSize = true;
+            this.label_betadescription.Location = new System.Drawing.Point(295, 62);
+            this.label_betadescription.Name = "label_betadescription";
+            this.label_betadescription.Size = new System.Drawing.Size(120, 26);
+            this.label_betadescription.TabIndex = 14;
+            this.label_betadescription.Text = "Ratio of relative velocity\r\n to speed of light";
+            this.label_betadescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_fourvector_boosted
+            // 
+            this.panel_fourvector_boosted.Controls.Add(this.textBox_x3_boosted);
+            this.panel_fourvector_boosted.Controls.Add(this.textBox_x2_boosted);
+            this.panel_fourvector_boosted.Controls.Add(this.textBox_x1_boosted);
+            this.panel_fourvector_boosted.Controls.Add(this.textBox_x0_boosted);
+            this.panel_fourvector_boosted.Controls.Add(this.pictureBox_fourvector_boosted);
+            this.panel_fourvector_boosted.Location = new System.Drawing.Point(23, 272);
+            this.panel_fourvector_boosted.Name = "panel_fourvector_boosted";
+            this.panel_fourvector_boosted.Size = new System.Drawing.Size(638, 39);
+            this.panel_fourvector_boosted.TabIndex = 13;
+            // 
+            // textBox_x3_boosted
+            // 
+            this.textBox_x3_boosted.Location = new System.Drawing.Point(523, 9);
+            this.textBox_x3_boosted.Name = "textBox_x3_boosted";
+            this.textBox_x3_boosted.ReadOnly = true;
+            this.textBox_x3_boosted.Size = new System.Drawing.Size(100, 20);
+            this.textBox_x3_boosted.TabIndex = 4;
+            // 
+            // textBox_x2_boosted
+            // 
+            this.textBox_x2_boosted.Location = new System.Drawing.Point(417, 9);
+            this.textBox_x2_boosted.Name = "textBox_x2_boosted";
+            this.textBox_x2_boosted.ReadOnly = true;
+            this.textBox_x2_boosted.Size = new System.Drawing.Size(100, 20);
+            this.textBox_x2_boosted.TabIndex = 3;
+            // 
+            // textBox_x1_boosted
+            // 
+            this.textBox_x1_boosted.Location = new System.Drawing.Point(311, 9);
+            this.textBox_x1_boosted.Name = "textBox_x1_boosted";
+            this.textBox_x1_boosted.ReadOnly = true;
+            this.textBox_x1_boosted.Size = new System.Drawing.Size(100, 20);
+            this.textBox_x1_boosted.TabIndex = 2;
+            // 
+            // textBox_x0_boosted
+            // 
+            this.textBox_x0_boosted.Location = new System.Drawing.Point(205, 9);
+            this.textBox_x0_boosted.Name = "textBox_x0_boosted";
+            this.textBox_x0_boosted.ReadOnly = true;
+            this.textBox_x0_boosted.Size = new System.Drawing.Size(100, 20);
+            this.textBox_x0_boosted.TabIndex = 1;
+            // 
+            // pictureBox_fourvector_boosted
+            // 
+            this.pictureBox_fourvector_boosted.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox_fourvector_boosted.Image = global::Four_Vector_App.Properties.Resources.Formula_four_vector;
+            this.pictureBox_fourvector_boosted.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_fourvector_boosted.Name = "pictureBox_fourvector_boosted";
+            this.pictureBox_fourvector_boosted.Size = new System.Drawing.Size(199, 39);
+            this.pictureBox_fourvector_boosted.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_fourvector_boosted.TabIndex = 0;
+            this.pictureBox_fourvector_boosted.TabStop = false;
             // 
             // button_lorentzboost
             // 
@@ -282,105 +410,298 @@
             this.pictureBox_lorentzmatrix.TabIndex = 0;
             this.pictureBox_lorentzmatrix.TabStop = false;
             // 
-            // panel_fourvector_boosted
+            // panel1
             // 
-            this.panel_fourvector_boosted.Controls.Add(this.textBox_x3_boosted);
-            this.panel_fourvector_boosted.Controls.Add(this.textBox_x2_boosted);
-            this.panel_fourvector_boosted.Controls.Add(this.textBox_x1_boosted);
-            this.panel_fourvector_boosted.Controls.Add(this.textBox_x0_boosted);
-            this.panel_fourvector_boosted.Controls.Add(this.pictureBox_fourvector_boosted);
-            this.panel_fourvector_boosted.Location = new System.Drawing.Point(18, 272);
-            this.panel_fourvector_boosted.Name = "panel_fourvector_boosted";
-            this.panel_fourvector_boosted.Size = new System.Drawing.Size(638, 39);
-            this.panel_fourvector_boosted.TabIndex = 13;
+            this.panel1.Controls.Add(this.label_boost3d_normalized);
+            this.panel1.Controls.Add(this.textBox_3dboostnormal_z);
+            this.panel1.Controls.Add(this.label_boostdirection3d);
+            this.panel1.Controls.Add(this.textBox_3dboostnormal_y);
+            this.panel1.Controls.Add(this.textBox_3dboostnormal_x);
+            this.panel1.Controls.Add(this.textBox_boostdirectionz3d);
+            this.panel1.Controls.Add(this.textBox_boostdirectiony3d);
+            this.panel1.Controls.Add(this.textBox_boostdirectionx3d);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox_gamma3d);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBox_beta3d);
+            this.panel1.Controls.Add(this.button_boost3d);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pictureBox_lorentztransform_3d);
+            this.panel1.Controls.Add(this.label_lorentz_3d);
+            this.panel1.Controls.Add(this.panel_beta3d);
+            this.panel1.Location = new System.Drawing.Point(12, 383);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1010, 332);
+            this.panel1.TabIndex = 2;
             // 
-            // textBox_x3_boosted
+            // label_boostdirection3d
             // 
-            this.textBox_x3_boosted.Location = new System.Drawing.Point(523, 9);
-            this.textBox_x3_boosted.Name = "textBox_x3_boosted";
-            this.textBox_x3_boosted.ReadOnly = true;
-            this.textBox_x3_boosted.Size = new System.Drawing.Size(100, 20);
-            this.textBox_x3_boosted.TabIndex = 4;
+            this.label_boostdirection3d.AutoSize = true;
+            this.label_boostdirection3d.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_boostdirection3d.Location = new System.Drawing.Point(14, 230);
+            this.label_boostdirection3d.Name = "label_boostdirection3d";
+            this.label_boostdirection3d.Size = new System.Drawing.Size(213, 33);
+            this.label_boostdirection3d.TabIndex = 33;
+            this.label_boostdirection3d.Text = "Boost Direction";
             // 
-            // textBox_x2_boosted
+            // textBox_boostdirectionz3d
             // 
-            this.textBox_x2_boosted.Location = new System.Drawing.Point(417, 9);
-            this.textBox_x2_boosted.Name = "textBox_x2_boosted";
-            this.textBox_x2_boosted.ReadOnly = true;
-            this.textBox_x2_boosted.Size = new System.Drawing.Size(100, 20);
-            this.textBox_x2_boosted.TabIndex = 3;
+            this.textBox_boostdirectionz3d.Location = new System.Drawing.Point(452, 239);
+            this.textBox_boostdirectionz3d.Name = "textBox_boostdirectionz3d";
+            this.textBox_boostdirectionz3d.Size = new System.Drawing.Size(100, 20);
+            this.textBox_boostdirectionz3d.TabIndex = 32;
+            this.textBox_boostdirectionz3d.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_numerical_KeyPress);
             // 
-            // textBox_x1_boosted
+            // textBox_boostdirectiony3d
             // 
-            this.textBox_x1_boosted.Location = new System.Drawing.Point(311, 9);
-            this.textBox_x1_boosted.Name = "textBox_x1_boosted";
-            this.textBox_x1_boosted.ReadOnly = true;
-            this.textBox_x1_boosted.Size = new System.Drawing.Size(100, 20);
-            this.textBox_x1_boosted.TabIndex = 2;
+            this.textBox_boostdirectiony3d.Location = new System.Drawing.Point(346, 239);
+            this.textBox_boostdirectiony3d.Name = "textBox_boostdirectiony3d";
+            this.textBox_boostdirectiony3d.Size = new System.Drawing.Size(100, 20);
+            this.textBox_boostdirectiony3d.TabIndex = 31;
+            this.textBox_boostdirectiony3d.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_numerical_KeyPress);
             // 
-            // textBox_x0_boosted
+            // textBox_boostdirectionx3d
             // 
-            this.textBox_x0_boosted.Location = new System.Drawing.Point(205, 9);
-            this.textBox_x0_boosted.Name = "textBox_x0_boosted";
-            this.textBox_x0_boosted.ReadOnly = true;
-            this.textBox_x0_boosted.Size = new System.Drawing.Size(100, 20);
-            this.textBox_x0_boosted.TabIndex = 1;
+            this.textBox_boostdirectionx3d.Location = new System.Drawing.Point(240, 239);
+            this.textBox_boostdirectionx3d.Name = "textBox_boostdirectionx3d";
+            this.textBox_boostdirectionx3d.Size = new System.Drawing.Size(100, 20);
+            this.textBox_boostdirectionx3d.TabIndex = 30;
+            this.textBox_boostdirectionx3d.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_numerical_KeyPress);
             // 
-            // pictureBox_fourvector_boosted
+            // label1
             // 
-            this.pictureBox_fourvector_boosted.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox_fourvector_boosted.Image = global::Four_Vector_App.Properties.Resources.Formula_four_vector;
-            this.pictureBox_fourvector_boosted.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_fourvector_boosted.Name = "pictureBox_fourvector_boosted";
-            this.pictureBox_fourvector_boosted.Size = new System.Drawing.Size(199, 39);
-            this.pictureBox_fourvector_boosted.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_fourvector_boosted.TabIndex = 0;
-            this.pictureBox_fourvector_boosted.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(594, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "(-1 < β < 1)";
             // 
-            // label_betadescription
+            // label2
             // 
-            this.label_betadescription.AutoSize = true;
-            this.label_betadescription.Location = new System.Drawing.Point(295, 62);
-            this.label_betadescription.Name = "label_betadescription";
-            this.label_betadescription.Size = new System.Drawing.Size(120, 26);
-            this.label_betadescription.TabIndex = 14;
-            this.label_betadescription.Text = "Ratio of relative velocity\r\n to speed of light";
-            this.label_betadescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(589, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Lorentz factor";
             // 
-            // label_gammadescription
+            // textBox_gamma3d
             // 
-            this.label_gammadescription.AutoSize = true;
-            this.label_gammadescription.Location = new System.Drawing.Point(339, 156);
-            this.label_gammadescription.Name = "label_gammadescription";
-            this.label_gammadescription.Size = new System.Drawing.Size(72, 13);
-            this.label_gammadescription.TabIndex = 15;
-            this.label_gammadescription.Text = "Lorentz factor";
+            this.textBox_gamma3d.Location = new System.Drawing.Point(592, 143);
+            this.textBox_gamma3d.Multiline = true;
+            this.textBox_gamma3d.Name = "textBox_gamma3d";
+            this.textBox_gamma3d.ReadOnly = true;
+            this.textBox_gamma3d.Size = new System.Drawing.Size(65, 20);
+            this.textBox_gamma3d.TabIndex = 27;
             // 
-            // label_betarange
+            // label3
             // 
-            this.label_betarange.AutoSize = true;
-            this.label_betarange.Location = new System.Drawing.Point(344, 124);
-            this.label_betarange.Name = "label_betarange";
-            this.label_betarange.Size = new System.Drawing.Size(58, 13);
-            this.label_betarange.TabIndex = 16;
-            this.label_betarange.Text = "(-1 < β < 1)";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(553, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 37);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Ɣ";
             // 
-            // linkLabel_lorentz_reference
+            // label4
             // 
-            this.linkLabel_lorentz_reference.AutoSize = true;
-            this.linkLabel_lorentz_reference.Location = new System.Drawing.Point(680, 227);
-            this.linkLabel_lorentz_reference.Name = "linkLabel_lorentz_reference";
-            this.linkLabel_lorentz_reference.Size = new System.Drawing.Size(303, 13);
-            this.linkLabel_lorentz_reference.TabIndex = 17;
-            this.linkLabel_lorentz_reference.TabStop = true;
-            this.linkLabel_lorentz_reference.Text = "http://hyperphysics.phy-astr.gsu.edu/hbase/Relativ/vec4.html";
-            this.linkLabel_lorentz_reference.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_lorentz_reference_LinkClicked);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(551, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 37);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "β";
+            // 
+            // textBox_beta3d
+            // 
+            this.textBox_beta3d.Location = new System.Drawing.Point(592, 70);
+            this.textBox_beta3d.Multiline = true;
+            this.textBox_beta3d.Name = "textBox_beta3d";
+            this.textBox_beta3d.Size = new System.Drawing.Size(65, 20);
+            this.textBox_beta3d.TabIndex = 24;
+            this.textBox_beta3d.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_numerical_KeyPress);
+            // 
+            // button_boost3d
+            // 
+            this.button_boost3d.BackColor = System.Drawing.SystemColors.Window;
+            this.button_boost3d.Location = new System.Drawing.Point(570, 230);
+            this.button_boost3d.Name = "button_boost3d";
+            this.button_boost3d.Size = new System.Drawing.Size(241, 36);
+            this.button_boost3d.TabIndex = 23;
+            this.button_boost3d.Text = "Boost!";
+            this.button_boost3d.UseVisualStyleBackColor = false;
+            this.button_boost3d.Click += new System.EventHandler(this.button_boost3d_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox_3dboosted_x3);
+            this.panel3.Controls.Add(this.textBox_3dboosted_x2);
+            this.panel3.Controls.Add(this.textBox_3dboosted_x1);
+            this.panel3.Controls.Add(this.textBox_3dboosted_x0);
+            this.panel3.Controls.Add(this.pictureBox_boosted3d);
+            this.panel3.Location = new System.Drawing.Point(25, 290);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(638, 39);
+            this.panel3.TabIndex = 22;
+            // 
+            // textBox_3dboosted_x3
+            // 
+            this.textBox_3dboosted_x3.Location = new System.Drawing.Point(523, 9);
+            this.textBox_3dboosted_x3.Name = "textBox_3dboosted_x3";
+            this.textBox_3dboosted_x3.ReadOnly = true;
+            this.textBox_3dboosted_x3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboosted_x3.TabIndex = 4;
+            // 
+            // textBox_3dboosted_x2
+            // 
+            this.textBox_3dboosted_x2.Location = new System.Drawing.Point(417, 9);
+            this.textBox_3dboosted_x2.Name = "textBox_3dboosted_x2";
+            this.textBox_3dboosted_x2.ReadOnly = true;
+            this.textBox_3dboosted_x2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboosted_x2.TabIndex = 3;
+            // 
+            // textBox_3dboosted_x1
+            // 
+            this.textBox_3dboosted_x1.Location = new System.Drawing.Point(311, 9);
+            this.textBox_3dboosted_x1.Name = "textBox_3dboosted_x1";
+            this.textBox_3dboosted_x1.ReadOnly = true;
+            this.textBox_3dboosted_x1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboosted_x1.TabIndex = 2;
+            // 
+            // textBox_3dboosted_x0
+            // 
+            this.textBox_3dboosted_x0.Location = new System.Drawing.Point(205, 9);
+            this.textBox_3dboosted_x0.Name = "textBox_3dboosted_x0";
+            this.textBox_3dboosted_x0.ReadOnly = true;
+            this.textBox_3dboosted_x0.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboosted_x0.TabIndex = 1;
+            // 
+            // pictureBox_boosted3d
+            // 
+            this.pictureBox_boosted3d.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox_boosted3d.Image = global::Four_Vector_App.Properties.Resources.Formula_four_vector;
+            this.pictureBox_boosted3d.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_boosted3d.Name = "pictureBox_boosted3d";
+            this.pictureBox_boosted3d.Size = new System.Drawing.Size(199, 39);
+            this.pictureBox_boosted3d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_boosted3d.TabIndex = 0;
+            this.pictureBox_boosted3d.TabStop = false;
+            // 
+            // pictureBox_lorentztransform_3d
+            // 
+            this.pictureBox_lorentztransform_3d.Image = global::Four_Vector_App.Properties.Resources.lorentz_transformation_matrix_3d;
+            this.pictureBox_lorentztransform_3d.Location = new System.Drawing.Point(35, 70);
+            this.pictureBox_lorentztransform_3d.Name = "pictureBox_lorentztransform_3d";
+            this.pictureBox_lorentztransform_3d.Size = new System.Drawing.Size(504, 144);
+            this.pictureBox_lorentztransform_3d.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_lorentztransform_3d.TabIndex = 21;
+            this.pictureBox_lorentztransform_3d.TabStop = false;
+            // 
+            // label_lorentz_3d
+            // 
+            this.label_lorentz_3d.AutoSize = true;
+            this.label_lorentz_3d.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_lorentz_3d.Location = new System.Drawing.Point(28, 14);
+            this.label_lorentz_3d.Name = "label_lorentz_3d";
+            this.label_lorentz_3d.Size = new System.Drawing.Size(692, 39);
+            this.label_lorentz_3d.TabIndex = 20;
+            this.label_lorentz_3d.Text = "Lorentz Transformation in arbitrary direction";
+            // 
+            // panel_beta3d
+            // 
+            this.panel_beta3d.Controls.Add(this.label_beta3d);
+            this.panel_beta3d.Controls.Add(this.textBox_betaz3d);
+            this.panel_beta3d.Controls.Add(this.textBox_betay3d);
+            this.panel_beta3d.Controls.Add(this.textBox_betax3d);
+            this.panel_beta3d.Location = new System.Drawing.Point(548, 169);
+            this.panel_beta3d.Name = "panel_beta3d";
+            this.panel_beta3d.Size = new System.Drawing.Size(448, 51);
+            this.panel_beta3d.TabIndex = 19;
+            // 
+            // label_beta3d
+            // 
+            this.label_beta3d.AutoSize = true;
+            this.label_beta3d.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_beta3d.Location = new System.Drawing.Point(3, 2);
+            this.label_beta3d.Name = "label_beta3d";
+            this.label_beta3d.Size = new System.Drawing.Size(108, 37);
+            this.label_beta3d.TabIndex = 7;
+            this.label_beta3d.Text = "β x,y,z";
+            // 
+            // textBox_betaz3d
+            // 
+            this.textBox_betaz3d.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_betaz3d.Location = new System.Drawing.Point(336, 15);
+            this.textBox_betaz3d.Name = "textBox_betaz3d";
+            this.textBox_betaz3d.ReadOnly = true;
+            this.textBox_betaz3d.Size = new System.Drawing.Size(100, 20);
+            this.textBox_betaz3d.TabIndex = 6;
+            // 
+            // textBox_betay3d
+            // 
+            this.textBox_betay3d.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_betay3d.Location = new System.Drawing.Point(230, 15);
+            this.textBox_betay3d.Name = "textBox_betay3d";
+            this.textBox_betay3d.ReadOnly = true;
+            this.textBox_betay3d.Size = new System.Drawing.Size(100, 20);
+            this.textBox_betay3d.TabIndex = 5;
+            // 
+            // textBox_betax3d
+            // 
+            this.textBox_betax3d.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_betax3d.Location = new System.Drawing.Point(124, 15);
+            this.textBox_betax3d.Name = "textBox_betax3d";
+            this.textBox_betax3d.ReadOnly = true;
+            this.textBox_betax3d.Size = new System.Drawing.Size(100, 20);
+            this.textBox_betax3d.TabIndex = 4;
+            // 
+            // textBox_3dboostnormal_z
+            // 
+            this.textBox_3dboostnormal_z.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_3dboostnormal_z.Location = new System.Drawing.Point(452, 264);
+            this.textBox_3dboostnormal_z.Name = "textBox_3dboostnormal_z";
+            this.textBox_3dboostnormal_z.ReadOnly = true;
+            this.textBox_3dboostnormal_z.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboostnormal_z.TabIndex = 10;
+            // 
+            // textBox_3dboostnormal_y
+            // 
+            this.textBox_3dboostnormal_y.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_3dboostnormal_y.Location = new System.Drawing.Point(346, 264);
+            this.textBox_3dboostnormal_y.Name = "textBox_3dboostnormal_y";
+            this.textBox_3dboostnormal_y.ReadOnly = true;
+            this.textBox_3dboostnormal_y.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboostnormal_y.TabIndex = 9;
+            // 
+            // textBox_3dboostnormal_x
+            // 
+            this.textBox_3dboostnormal_x.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_3dboostnormal_x.Location = new System.Drawing.Point(240, 264);
+            this.textBox_3dboostnormal_x.Name = "textBox_3dboostnormal_x";
+            this.textBox_3dboostnormal_x.ReadOnly = true;
+            this.textBox_3dboostnormal_x.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboostnormal_x.TabIndex = 8;
+            // 
+            // label_boost3d_normalized
+            // 
+            this.label_boost3d_normalized.AutoSize = true;
+            this.label_boost3d_normalized.Location = new System.Drawing.Point(170, 267);
+            this.label_boost3d_normalized.Name = "label_boost3d_normalized";
+            this.label_boost3d_normalized.Size = new System.Drawing.Size(57, 13);
+            this.label_boost3d_normalized.TabIndex = 34;
+            this.label_boost3d_normalized.Text = "normalized";
             // 
             // Main_window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 539);
+            this.ClientSize = new System.Drawing.Size(1048, 727);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_lorentzresult);
             this.Controls.Add(this.panel_fourvector);
             this.Name = "Main_window";
@@ -390,13 +711,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_formula_fourvector)).EndInit();
             this.panel_lorentzresult.ResumeLayout(false);
             this.panel_lorentzresult.PerformLayout();
+            this.panel_fourvector_boosted.ResumeLayout(false);
+            this.panel_fourvector_boosted.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fourvector_boosted)).EndInit();
             this.groupBox_boostdirection.ResumeLayout(false);
             this.groupBox_boostdirection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lorentzresult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lorentzmatrix)).EndInit();
-            this.panel_fourvector_boosted.ResumeLayout(false);
-            this.panel_fourvector_boosted.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fourvector_boosted)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_boosted3d)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_lorentztransform_3d)).EndInit();
+            this.panel_beta3d.ResumeLayout(false);
+            this.panel_beta3d.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -433,6 +762,35 @@
         private System.Windows.Forms.Label label_gammadescription;
         private System.Windows.Forms.Label label_betadescription;
         private System.Windows.Forms.LinkLabel linkLabel_lorentz_reference;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox_lorentztransform_3d;
+        private System.Windows.Forms.Label label_lorentz_3d;
+        private System.Windows.Forms.Panel panel_beta3d;
+        private System.Windows.Forms.Label label_beta3d;
+        private System.Windows.Forms.TextBox textBox_betaz3d;
+        private System.Windows.Forms.TextBox textBox_betay3d;
+        private System.Windows.Forms.TextBox textBox_betax3d;
+        private System.Windows.Forms.Button button_boost3d;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBox_3dboosted_x3;
+        private System.Windows.Forms.TextBox textBox_3dboosted_x2;
+        private System.Windows.Forms.TextBox textBox_3dboosted_x1;
+        private System.Windows.Forms.TextBox textBox_3dboosted_x0;
+        private System.Windows.Forms.PictureBox pictureBox_boosted3d;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_gamma3d;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox_beta3d;
+        private System.Windows.Forms.Label label_boostdirection3d;
+        private System.Windows.Forms.TextBox textBox_boostdirectionz3d;
+        private System.Windows.Forms.TextBox textBox_boostdirectiony3d;
+        private System.Windows.Forms.TextBox textBox_boostdirectionx3d;
+        private System.Windows.Forms.Label label_boost3d_normalized;
+        private System.Windows.Forms.TextBox textBox_3dboostnormal_z;
+        private System.Windows.Forms.TextBox textBox_3dboostnormal_y;
+        private System.Windows.Forms.TextBox textBox_3dboostnormal_x;
     }
 }
 

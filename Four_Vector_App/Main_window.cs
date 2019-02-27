@@ -18,7 +18,7 @@ namespace Four_Vector_App
             //Matrix tester = new Matrix();
             //tester.test01();
         }
-        
+
         private void textBox_numerical_KeyPress(object sender, KeyPressEventArgs e)
         {
             // https://stackoverflow.com/questions/463299/how-do-i-make-a-textbox-that-only-accepts-numbers
@@ -128,5 +128,75 @@ namespace Four_Vector_App
         {
             System.Diagnostics.Process.Start((sender as LinkLabel).Text);
         }
+
+        private void button_boost3d_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var beta = Convert.ToDouble(textBox_beta3d.Text);
+                var gamma = calculate_gamma(beta);
+                if (double.IsNaN(gamma))
+                {
+                    return;
+                }
+                textBox_gamma3d.Text = gamma.ToString();
+                var boostx = Convert.ToDouble(textBox_boostdirectionx3d.Text);
+                var boosty = Convert.ToDouble(textBox_boostdirectiony3d.Text);
+                var boostz = Convert.ToDouble(textBox_boostdirectionz3d.Text);
+                var boost_norm = Math.Sqrt(boostx * boostx + boosty * boosty + boostz * boostz);
+                var betax = beta / boost_norm * boostx;
+                var betay = beta / boost_norm * boosty;
+                var betaz = beta / boost_norm * boostz;
+                double[] _beta = { betax, betay, betaz };
+                textBox_betax3d.Text = betax.ToString();
+                textBox_betay3d.Text = betay.ToString();
+                textBox_betaz3d.Text = betaz.ToString();
+                textBox_3dboostnormal_x.Text = (boostx / boost_norm).ToString();
+                textBox_3dboostnormal_y.Text = (boosty / boost_norm).ToString();
+                textBox_3dboostnormal_z.Text = (boostz / boost_norm).ToString();
+
+                double[,] lorentz_array = new double[4, 4];
+                lorentz_array[0, 0] = gamma;
+                for (int i = 1; i < 4; i++)
+                {
+                    lorentz_array[i, 0] = -1.0 * gamma * _beta[i - 1];
+                    lorentz_array[0, i] = -1.0 * gamma * _beta[i - 1];
+                }
+                for (int i = 1; i < 4; i++)
+                {
+                    for (int j = 1; j < 4; j++)
+                    {
+                        lorentz_array[i, j] = (gamma - 1.0) * _beta[i-1] * _beta[j-1] / (beta * beta);
+                    }
+                }
+                for (int j = 1; j < 4; j++)
+                {
+                    lorentz_array[j, j] += 1;
+                }
+                Matrix lorentz_matrix = new Matrix(lorentz_array);
+
+
+                var ct = Convert.ToDouble(textBox_x0.Text);
+                var x = Convert.ToDouble(textBox_x1.Text);
+                var y = Convert.ToDouble(textBox_x2.Text);
+                var z = Convert.ToDouble(textBox_x3.Text);
+
+                Matrix position_4vector = new Matrix(new double[] { ct, x, y, z });
+
+                Matrix new_position = lorentz_matrix.multiply(position_4vector);
+                new_position.print();
+                textBox_3dboosted_x0.Text = new_position.array[0, 0].ToString();
+                textBox_3dboosted_x1.Text = new_position.array[1, 0].ToString();
+                textBox_3dboosted_x2.Text = new_position.array[2, 0].ToString();
+                textBox_3dboosted_x3.Text = new_position.array[3, 0].ToString();
+
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error converting inputs to numerical values.");
+            }
+        }
+
+
     }
 }

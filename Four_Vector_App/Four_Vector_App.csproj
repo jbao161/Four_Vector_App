@@ -91,5 +91,8 @@
   <ItemGroup>
     <None Include="res\lorentz transform.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="res\lorentz transformation matrix 3d.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

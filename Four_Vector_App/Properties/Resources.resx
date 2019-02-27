@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lorentz transform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\lorentz transform.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Formula_four_vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\Formula four vector.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lorentz transform matrix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\lorentz transform matrix.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lorentz transform" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\lorentz transform.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lorentz transformation matrix 3d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\lorentz transformation matrix 3d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
