@@ -36,10 +36,7 @@
             this.pictureBox_formula_fourvector = new System.Windows.Forms.PictureBox();
             this.label_boost3d_normalized = new System.Windows.Forms.Label();
             this.label_rotationvector = new System.Windows.Forms.Label();
-            this.textBox_boostdirectionz3d = new System.Windows.Forms.TextBox();
-            this.textBox_boostdirectiony3d = new System.Windows.Forms.TextBox();
-            this.textBox_boostdirectionx3d = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rotation_formula = new System.Windows.Forms.PictureBox();
             this.textBox_rotation_z = new System.Windows.Forms.TextBox();
             this.textBox_rotation_y = new System.Windows.Forms.TextBox();
             this.textBox_rotation_x = new System.Windows.Forms.TextBox();
@@ -47,7 +44,7 @@
             this.label_rotation_angle = new System.Windows.Forms.Label();
             this.label_rotation_unitvector = new System.Windows.Forms.Label();
             this.button_rotate = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.rotated_fourvector = new System.Windows.Forms.Panel();
             this.textBox_rotated_x3 = new System.Windows.Forms.TextBox();
             this.textBox_rotated_x2 = new System.Windows.Forms.TextBox();
             this.textBox_rotated_x1 = new System.Windows.Forms.TextBox();
@@ -56,27 +53,27 @@
             this.textBox_rotation_norm_z = new System.Windows.Forms.TextBox();
             this.textBox_rotation_norm_y = new System.Windows.Forms.TextBox();
             this.textBox_rotation_norm_x = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_1_4 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_1_3 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_1_2 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_1_1 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_2_4 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_2_3 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_2_2 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_2_1 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_3_4 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_3_3 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_3_2 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_3_1 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_4_4 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_4_3 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_4_2 = new System.Windows.Forms.TextBox();
+            this.textBox_matrix_4_1 = new System.Windows.Forms.TextBox();
             this.label_rotationmatrix = new System.Windows.Forms.Label();
             this.panel_fourvector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_formula_fourvector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rotation_formula)).BeginInit();
+            this.rotated_fourvector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,36 +151,15 @@
             this.label_rotationvector.TabIndex = 41;
             this.label_rotationvector.Text = "Rotation Vector";
             // 
-            // textBox_boostdirectionz3d
+            // rotation_formula
             // 
-            this.textBox_boostdirectionz3d.Location = new System.Drawing.Point(462, 233);
-            this.textBox_boostdirectionz3d.Name = "textBox_boostdirectionz3d";
-            this.textBox_boostdirectionz3d.Size = new System.Drawing.Size(100, 20);
-            this.textBox_boostdirectionz3d.TabIndex = 40;
-            // 
-            // textBox_boostdirectiony3d
-            // 
-            this.textBox_boostdirectiony3d.Location = new System.Drawing.Point(356, 233);
-            this.textBox_boostdirectiony3d.Name = "textBox_boostdirectiony3d";
-            this.textBox_boostdirectiony3d.Size = new System.Drawing.Size(100, 20);
-            this.textBox_boostdirectiony3d.TabIndex = 39;
-            // 
-            // textBox_boostdirectionx3d
-            // 
-            this.textBox_boostdirectionx3d.Location = new System.Drawing.Point(250, 233);
-            this.textBox_boostdirectionx3d.Name = "textBox_boostdirectionx3d";
-            this.textBox_boostdirectionx3d.Size = new System.Drawing.Size(100, 20);
-            this.textBox_boostdirectionx3d.TabIndex = 38;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Four_Vector_App.Properties.Resources.rotation_formula;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 58);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(548, 220);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
+            this.rotation_formula.Image = global::Four_Vector_App.Properties.Resources.rotation_formula;
+            this.rotation_formula.Location = new System.Drawing.Point(14, 58);
+            this.rotation_formula.Name = "rotation_formula";
+            this.rotation_formula.Size = new System.Drawing.Size(548, 220);
+            this.rotation_formula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.rotation_formula.TabIndex = 43;
+            this.rotation_formula.TabStop = false;
             // 
             // textBox_rotation_z
             // 
@@ -246,18 +222,19 @@
             this.button_rotate.TabIndex = 53;
             this.button_rotate.Text = "Rotate!";
             this.button_rotate.UseVisualStyleBackColor = false;
+            this.button_rotate.Click += new System.EventHandler(this.button_rotate_Click);
             // 
-            // panel1
+            // rotated_fourvector
             // 
-            this.panel1.Controls.Add(this.textBox_rotated_x3);
-            this.panel1.Controls.Add(this.textBox_rotated_x2);
-            this.panel1.Controls.Add(this.textBox_rotated_x1);
-            this.panel1.Controls.Add(this.textBox_rotated_x0);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(71, 399);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(638, 39);
-            this.panel1.TabIndex = 5;
+            this.rotated_fourvector.Controls.Add(this.textBox_rotated_x3);
+            this.rotated_fourvector.Controls.Add(this.textBox_rotated_x2);
+            this.rotated_fourvector.Controls.Add(this.textBox_rotated_x1);
+            this.rotated_fourvector.Controls.Add(this.textBox_rotated_x0);
+            this.rotated_fourvector.Controls.Add(this.pictureBox2);
+            this.rotated_fourvector.Location = new System.Drawing.Point(71, 399);
+            this.rotated_fourvector.Name = "rotated_fourvector";
+            this.rotated_fourvector.Size = new System.Drawing.Size(638, 39);
+            this.rotated_fourvector.TabIndex = 5;
             // 
             // textBox_rotated_x3
             // 
@@ -326,149 +303,133 @@
             this.textBox_rotation_norm_x.Size = new System.Drawing.Size(100, 20);
             this.textBox_rotation_norm_x.TabIndex = 54;
             // 
-            // textBox1
+            // textBox_matrix_1_4
             // 
-            this.textBox1.Location = new System.Drawing.Point(979, 103);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBox_matrix_1_4.Location = new System.Drawing.Point(979, 103);
+            this.textBox_matrix_1_4.Name = "textBox_matrix_1_4";
+            this.textBox_matrix_1_4.ReadOnly = true;
+            this.textBox_matrix_1_4.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_1_4.TabIndex = 8;
             // 
-            // textBox2
+            // textBox_matrix_1_3
             // 
-            this.textBox2.Location = new System.Drawing.Point(873, 103);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBox_matrix_1_3.Location = new System.Drawing.Point(873, 103);
+            this.textBox_matrix_1_3.Name = "textBox_matrix_1_3";
+            this.textBox_matrix_1_3.ReadOnly = true;
+            this.textBox_matrix_1_3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_1_3.TabIndex = 7;
             // 
-            // textBox3
+            // textBox_matrix_1_2
             // 
-            this.textBox3.Location = new System.Drawing.Point(767, 103);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBox_matrix_1_2.Location = new System.Drawing.Point(767, 103);
+            this.textBox_matrix_1_2.Name = "textBox_matrix_1_2";
+            this.textBox_matrix_1_2.ReadOnly = true;
+            this.textBox_matrix_1_2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_1_2.TabIndex = 6;
             // 
-            // textBox4
+            // textBox_matrix_1_1
             // 
-            this.textBox4.Location = new System.Drawing.Point(661, 103);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.textBox_matrix_1_1.Location = new System.Drawing.Point(661, 103);
+            this.textBox_matrix_1_1.Name = "textBox_matrix_1_1";
+            this.textBox_matrix_1_1.ReadOnly = true;
+            this.textBox_matrix_1_1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_1_1.TabIndex = 5;
             // 
-            // textBox5
+            // textBox_matrix_2_4
             // 
-            this.textBox5.Location = new System.Drawing.Point(979, 143);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 60;
+            this.textBox_matrix_2_4.Location = new System.Drawing.Point(979, 143);
+            this.textBox_matrix_2_4.Name = "textBox_matrix_2_4";
+            this.textBox_matrix_2_4.ReadOnly = true;
+            this.textBox_matrix_2_4.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_2_4.TabIndex = 60;
             // 
-            // textBox6
+            // textBox_matrix_2_3
             // 
-            this.textBox6.Location = new System.Drawing.Point(873, 143);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 59;
+            this.textBox_matrix_2_3.Location = new System.Drawing.Point(873, 143);
+            this.textBox_matrix_2_3.Name = "textBox_matrix_2_3";
+            this.textBox_matrix_2_3.ReadOnly = true;
+            this.textBox_matrix_2_3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_2_3.TabIndex = 59;
             // 
-            // textBox7
+            // textBox_matrix_2_2
             // 
-            this.textBox7.Location = new System.Drawing.Point(767, 143);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 58;
+            this.textBox_matrix_2_2.Location = new System.Drawing.Point(767, 143);
+            this.textBox_matrix_2_2.Name = "textBox_matrix_2_2";
+            this.textBox_matrix_2_2.ReadOnly = true;
+            this.textBox_matrix_2_2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_2_2.TabIndex = 58;
             // 
-            // textBox8
+            // textBox_matrix_2_1
             // 
-            this.textBox8.Location = new System.Drawing.Point(661, 143);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 57;
+            this.textBox_matrix_2_1.Location = new System.Drawing.Point(661, 143);
+            this.textBox_matrix_2_1.Name = "textBox_matrix_2_1";
+            this.textBox_matrix_2_1.ReadOnly = true;
+            this.textBox_matrix_2_1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_2_1.TabIndex = 57;
             // 
-            // textBox9
+            // textBox_matrix_3_4
             // 
-            this.textBox9.Location = new System.Drawing.Point(979, 183);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 64;
+            this.textBox_matrix_3_4.Location = new System.Drawing.Point(979, 183);
+            this.textBox_matrix_3_4.Name = "textBox_matrix_3_4";
+            this.textBox_matrix_3_4.ReadOnly = true;
+            this.textBox_matrix_3_4.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_3_4.TabIndex = 64;
             // 
-            // textBox10
+            // textBox_matrix_3_3
             // 
-            this.textBox10.Location = new System.Drawing.Point(873, 183);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 63;
+            this.textBox_matrix_3_3.Location = new System.Drawing.Point(873, 183);
+            this.textBox_matrix_3_3.Name = "textBox_matrix_3_3";
+            this.textBox_matrix_3_3.ReadOnly = true;
+            this.textBox_matrix_3_3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_3_3.TabIndex = 63;
             // 
-            // textBox11
+            // textBox_matrix_3_2
             // 
-            this.textBox11.Location = new System.Drawing.Point(767, 183);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 62;
+            this.textBox_matrix_3_2.Location = new System.Drawing.Point(767, 183);
+            this.textBox_matrix_3_2.Name = "textBox_matrix_3_2";
+            this.textBox_matrix_3_2.ReadOnly = true;
+            this.textBox_matrix_3_2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_3_2.TabIndex = 62;
             // 
-            // textBox12
+            // textBox_matrix_3_1
             // 
-            this.textBox12.Location = new System.Drawing.Point(661, 183);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 61;
+            this.textBox_matrix_3_1.Location = new System.Drawing.Point(661, 183);
+            this.textBox_matrix_3_1.Name = "textBox_matrix_3_1";
+            this.textBox_matrix_3_1.ReadOnly = true;
+            this.textBox_matrix_3_1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_3_1.TabIndex = 61;
             // 
-            // textBox13
+            // textBox_matrix_4_4
             // 
-            this.textBox13.Location = new System.Drawing.Point(979, 223);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 68;
+            this.textBox_matrix_4_4.Location = new System.Drawing.Point(979, 223);
+            this.textBox_matrix_4_4.Name = "textBox_matrix_4_4";
+            this.textBox_matrix_4_4.ReadOnly = true;
+            this.textBox_matrix_4_4.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_4_4.TabIndex = 68;
             // 
-            // textBox14
+            // textBox_matrix_4_3
             // 
-            this.textBox14.Location = new System.Drawing.Point(873, 223);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 67;
+            this.textBox_matrix_4_3.Location = new System.Drawing.Point(873, 223);
+            this.textBox_matrix_4_3.Name = "textBox_matrix_4_3";
+            this.textBox_matrix_4_3.ReadOnly = true;
+            this.textBox_matrix_4_3.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_4_3.TabIndex = 67;
             // 
-            // textBox15
+            // textBox_matrix_4_2
             // 
-            this.textBox15.Location = new System.Drawing.Point(767, 223);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 66;
+            this.textBox_matrix_4_2.Location = new System.Drawing.Point(767, 223);
+            this.textBox_matrix_4_2.Name = "textBox_matrix_4_2";
+            this.textBox_matrix_4_2.ReadOnly = true;
+            this.textBox_matrix_4_2.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_4_2.TabIndex = 66;
             // 
-            // textBox16
+            // textBox_matrix_4_1
             // 
-            this.textBox16.Location = new System.Drawing.Point(661, 223);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 20);
-            this.textBox16.TabIndex = 65;
+            this.textBox_matrix_4_1.Location = new System.Drawing.Point(661, 223);
+            this.textBox_matrix_4_1.Name = "textBox_matrix_4_1";
+            this.textBox_matrix_4_1.ReadOnly = true;
+            this.textBox_matrix_4_1.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matrix_4_1.TabIndex = 65;
             // 
             // label_rotationmatrix
             // 
@@ -486,26 +447,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 830);
             this.Controls.Add(this.label_rotationmatrix);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox_matrix_4_4);
+            this.Controls.Add(this.textBox_matrix_4_3);
+            this.Controls.Add(this.textBox_matrix_4_2);
+            this.Controls.Add(this.textBox_matrix_4_1);
+            this.Controls.Add(this.textBox_matrix_3_4);
+            this.Controls.Add(this.textBox_matrix_3_3);
+            this.Controls.Add(this.textBox_matrix_3_2);
+            this.Controls.Add(this.textBox_matrix_3_1);
+            this.Controls.Add(this.textBox_matrix_2_4);
+            this.Controls.Add(this.textBox_matrix_2_3);
+            this.Controls.Add(this.textBox_matrix_2_2);
+            this.Controls.Add(this.textBox_matrix_2_1);
+            this.Controls.Add(this.textBox_matrix_1_4);
+            this.Controls.Add(this.textBox_matrix_1_3);
+            this.Controls.Add(this.textBox_matrix_1_2);
+            this.Controls.Add(this.textBox_matrix_1_1);
             this.Controls.Add(this.textBox_rotation_norm_z);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox_rotation_norm_y);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox_rotation_norm_x);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.rotated_fourvector);
             this.Controls.Add(this.button_rotate);
             this.Controls.Add(this.label_rotation_unitvector);
             this.Controls.Add(this.label_rotation_angle);
@@ -513,21 +474,18 @@
             this.Controls.Add(this.textBox_rotation_z);
             this.Controls.Add(this.textBox_rotation_y);
             this.Controls.Add(this.textBox_rotation_x);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.rotation_formula);
             this.Controls.Add(this.label_boost3d_normalized);
             this.Controls.Add(this.label_rotationvector);
-            this.Controls.Add(this.textBox_boostdirectionz3d);
-            this.Controls.Add(this.textBox_boostdirectiony3d);
-            this.Controls.Add(this.textBox_boostdirectionx3d);
             this.Controls.Add(this.panel_fourvector);
             this.Name = "Form_rotation";
             this.Text = "Rotation of four vector";
             this.panel_fourvector.ResumeLayout(false);
             this.panel_fourvector.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_formula_fourvector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rotation_formula)).EndInit();
+            this.rotated_fourvector.ResumeLayout(false);
+            this.rotated_fourvector.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -544,10 +502,7 @@
         private System.Windows.Forms.PictureBox pictureBox_formula_fourvector;
         private System.Windows.Forms.Label label_boost3d_normalized;
         private System.Windows.Forms.Label label_rotationvector;
-        private System.Windows.Forms.TextBox textBox_boostdirectionz3d;
-        private System.Windows.Forms.TextBox textBox_boostdirectiony3d;
-        private System.Windows.Forms.TextBox textBox_boostdirectionx3d;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox rotation_formula;
         private System.Windows.Forms.TextBox textBox_rotation_z;
         private System.Windows.Forms.TextBox textBox_rotation_y;
         private System.Windows.Forms.TextBox textBox_rotation_x;
@@ -555,7 +510,7 @@
         private System.Windows.Forms.Label label_rotation_angle;
         private System.Windows.Forms.Label label_rotation_unitvector;
         private System.Windows.Forms.Button button_rotate;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel rotated_fourvector;
         private System.Windows.Forms.TextBox textBox_rotated_x3;
         private System.Windows.Forms.TextBox textBox_rotated_x2;
         private System.Windows.Forms.TextBox textBox_rotated_x1;
@@ -564,22 +519,22 @@
         private System.Windows.Forms.TextBox textBox_rotation_norm_z;
         private System.Windows.Forms.TextBox textBox_rotation_norm_y;
         private System.Windows.Forms.TextBox textBox_rotation_norm_x;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox_matrix_1_4;
+        private System.Windows.Forms.TextBox textBox_matrix_1_3;
+        private System.Windows.Forms.TextBox textBox_matrix_1_2;
+        private System.Windows.Forms.TextBox textBox_matrix_1_1;
+        private System.Windows.Forms.TextBox textBox_matrix_2_4;
+        private System.Windows.Forms.TextBox textBox_matrix_2_3;
+        private System.Windows.Forms.TextBox textBox_matrix_2_2;
+        private System.Windows.Forms.TextBox textBox_matrix_2_1;
+        private System.Windows.Forms.TextBox textBox_matrix_3_4;
+        private System.Windows.Forms.TextBox textBox_matrix_3_3;
+        private System.Windows.Forms.TextBox textBox_matrix_3_2;
+        private System.Windows.Forms.TextBox textBox_matrix_3_1;
+        private System.Windows.Forms.TextBox textBox_matrix_4_4;
+        private System.Windows.Forms.TextBox textBox_matrix_4_3;
+        private System.Windows.Forms.TextBox textBox_matrix_4_2;
+        private System.Windows.Forms.TextBox textBox_matrix_4_1;
         private System.Windows.Forms.Label label_rotationmatrix;
     }
 }

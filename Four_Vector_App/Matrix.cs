@@ -905,27 +905,27 @@ namespace Four_Vector_App
             rotation_vector.CopyTo(_n, 1);
             double[,] rotation_array = new double[rotation_vector.Length + 1, rotation_vector.Length + 1];
             rotation_array[0, 0] = 1;
-            for (int i = 0; i < rotation_array.Rank; i++)
+            for (int i = 1; i < rotation_array.GetLength(0); i++)
             {
                 rotation_array[i, 0] = 0;
             }
-            for (int i = 0; i < rotation_array.Length; i++)
+            for (int i = 1; i < rotation_array.GetLength(0); i++)
             {
                 rotation_array[0, i] = 0;
             }
 
-            for (int i = 1; i < rotation_vector.Length; i++)
+            for (int i = 1; i < rotation_array.GetLength(0); i++)
             {
-                for (int j = 1; j < rotation_vector.Length; j++)
+                for (int j = 1; j < rotation_array.GetLength(0); j++)
                 {
                     double term1 = (kronecker_delta(i, j) - _n[i] * _n[j]) * Math.Cos(rotation_angle);
                     double levicita_term = 0;
-                    for (int k=1; k<rotation_vector.Length; k++)
+                    for (int k = 1; k < rotation_vector.Length; k++)
                     {
                         levicita_term += levi_cita_3d(i, j, k);
                     }
                     double term2 = -levicita_term * Math.Sin(rotation_angle) + _n[i] * _n[j];
-                    rotation_array[i, j] = term1+term2;
+                    rotation_array[i, j] = term1 + term2;
                 }
             }
             return rotation_array;
