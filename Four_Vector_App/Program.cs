@@ -16,7 +16,7 @@ namespace Four_Vector_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_window());
+            Application.Run(new multiwindows());
         }
     }
 }

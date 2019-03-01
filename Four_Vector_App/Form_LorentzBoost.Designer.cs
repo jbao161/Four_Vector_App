@@ -1,6 +1,6 @@
 ﻿namespace Four_Vector_App
 {
-    partial class Main_window
+    partial class Form_LorentzBoost
     {
         /// <summary>
         /// Required designer variable.

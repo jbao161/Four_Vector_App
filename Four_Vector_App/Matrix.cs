@@ -247,7 +247,7 @@ namespace Four_Vector_App
             {
                 for (int j = 0; j < d[1]; j++)
                 {
-                    Console.Out.Write(array[i, j].ToString()+" ");
+                    Console.Out.Write(array[i, j].ToString() + " ");
                 }
                 Console.Out.Write("\n\n");
             }
@@ -735,7 +735,7 @@ namespace Four_Vector_App
             array = crop;
         }
 
-        public void test01()
+        public static void test01()
         {
             double[][] test =
             {
@@ -855,5 +855,83 @@ namespace Four_Vector_App
         {
             return det(false);
         }
-    }
-}
+
+        public static int kronecker_delta(int i, int j)
+        {
+            if (i == j)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public static int levi_cita_3d(int i, int j, int k)
+        {
+            if (i == 0 && j == 1 && k == 2) return 1;
+            if (i == 1 && j == 2 && k == 0) return 1;
+            if (i == 2 && j == 0 && k == 1) return 1;
+            if (i == 0 && j == 2 && k == 1) return -1;
+            if (i == 1 && j == 0 && k == 2) return -1;
+            if (i == 2 && j == 1 && k == 0) return -1;
+            return 0;
+        }
+
+        public static int levi_cita_n(int[] indices)
+        {
+            int parity = 1;
+
+            for (int i = 0; i < indices.Length - 1; i++)
+            {
+                for (int j = i + 1; j < indices.Length; j++)
+                {
+                    if (indices[i] > indices[j])
+                    {
+                        parity = -parity;
+                    }
+                    else if (indices[i] == indices[j])
+                    {
+                        return 0;
+                    }
+
+                }
+            }
+            return parity;
+        }
+        public static double[,] Calculate_spacetime_rotationmatrix(double rotation_angle, double[] rotation_vector)
+        {
+            double[] _n = new double[rotation_vector.Length + 1]; // renumber the index from 1 to 3
+            rotation_vector.CopyTo(_n, 1);
+            double[,] rotation_array = new double[rotation_vector.Length + 1, rotation_vector.Length + 1];
+            rotation_array[0, 0] = 1;
+            for (int i = 0; i < rotation_array.Rank; i++)
+            {
+                rotation_array[i, 0] = 0;
+            }
+            for (int i = 0; i < rotation_array.Length; i++)
+            {
+                rotation_array[0, i] = 0;
+            }
+
+            for (int i = 1; i < rotation_vector.Length; i++)
+            {
+                for (int j = 1; j < rotation_vector.Length; j++)
+                {
+                    double term1 = (kronecker_delta(i, j) - _n[i] * _n[j]) * Math.Cos(rotation_angle);
+                    double levicita_term = 0;
+                    for (int k=1; k<rotation_vector.Length; k++)
+                    {
+                        levicita_term += levi_cita_3d(i, j, k);
+                    }
+                    double term2 = -levicita_term * Math.Sin(rotation_angle) + _n[i] * _n[j];
+                    rotation_array[i, j] = term1+term2;
+                }
+            }
+            return rotation_array;
+        }
+
+    } // end matrix class
+} // end four_vector_app namespace
+
+

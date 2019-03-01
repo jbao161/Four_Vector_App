@@ -46,17 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Matrix.cs" />
-    <Compile Include="Main_window.cs">
+    <Compile Include="Form_rotation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main_window.Designer.cs">
-      <DependentUpon>Main_window.cs</DependentUpon>
+    <Compile Include="Form_rotation.Designer.cs">
+      <DependentUpon>Form_rotation.cs</DependentUpon>
     </Compile>
+    <Compile Include="four_appformextension.cs" />
+    <Compile Include="Matrix.cs" />
+    <Compile Include="Form_LorentzBoost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LorentzBoost.Designer.cs">
+      <DependentUpon>Form_LorentzBoost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="multiwindows.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main_window.resx">
-      <DependentUpon>Main_window.cs</DependentUpon>
+    <EmbeddedResource Include="Form_rotation.resx">
+      <DependentUpon>Form_rotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LorentzBoost.resx">
+      <DependentUpon>Form_LorentzBoost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\lorentz transformation matrix 3d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\rotation formula.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

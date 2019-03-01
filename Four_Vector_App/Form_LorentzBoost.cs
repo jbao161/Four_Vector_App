@@ -10,37 +10,14 @@ using System.Windows.Forms;
 
 namespace Four_Vector_App
 {
-    public partial class Main_window : Form
+    public partial class Form_LorentzBoost : Form
     {
-        public Main_window()
+        public Form_LorentzBoost()
         {
             InitializeComponent();
-            //Matrix tester = new Matrix();
-            //tester.test01();
         }
 
-        private void textBox_numerical_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // https://stackoverflow.com/questions/463299/how-do-i-make-a-textbox-that-only-accepts-numbers
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.') &&
-                (e.KeyChar != '-'))
-            {
-                e.Handled = true;
-            }
 
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-            // only allow one negative sign at beginning
-            if ((e.KeyChar == '-') && (sender as TextBox).SelectionStart > 0)
-            {
-                e.Handled = true;
-            }
-
-        }
 
         private double calculate_gamma(double beta)
         {
