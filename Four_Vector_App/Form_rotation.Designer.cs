@@ -199,9 +199,9 @@
             this.label_rotation_angle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_rotation_angle.Location = new System.Drawing.Point(12, 351);
             this.label_rotation_angle.Name = "label_rotation_angle";
-            this.label_rotation_angle.Size = new System.Drawing.Size(338, 33);
+            this.label_rotation_angle.Size = new System.Drawing.Size(329, 33);
             this.label_rotation_angle.TabIndex = 48;
-            this.label_rotation_angle.Text = "Rotation Angle (degrees)";
+            this.label_rotation_angle.Text = "Rotation Angle (radians)";
             // 
             // label_rotation_unitvector
             // 
