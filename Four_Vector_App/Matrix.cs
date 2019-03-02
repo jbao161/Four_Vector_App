@@ -924,8 +924,8 @@ namespace Four_Vector_App
                     {
                         levicita_term += levi_cita_3d(i, j, k)*_n[k];
                     }
-                    double term2 = levicita_term * Math.Sin(rotation_angle) + _n[i] * _n[j];
-                    rotation_array[i, j] = term1 - term2;
+                    double term2 = -levicita_term * Math.Sin(rotation_angle) + _n[i] * _n[j];
+                    rotation_array[i, j] = term1 + term2;
                 }
             }
             return rotation_array;
