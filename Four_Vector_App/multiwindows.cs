@@ -28,7 +28,8 @@ namespace Four_Vector_App
 
             var forms = new List<Form>() {
             new Form_LorentzBoost(),
-            new Form_rotation()
+            new Form_rotation(),
+            new Form_boost_rotation()
 
         };
             foreach (var form in forms)

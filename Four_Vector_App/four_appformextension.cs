@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Four_Vector_App
 {
-    public static class four_appformextension
+    public static partial class four_appformextension
     {
         public static void textBox_numerical_KeyPress(this Form fourappform, object sender, KeyPressEventArgs e)
         {
@@ -31,5 +31,6 @@ namespace Four_Vector_App
             }
 
         }
+
     }
 }

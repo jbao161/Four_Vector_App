@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_boost_rotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_boost_rotation.Designer.cs">
+      <DependentUpon>Form_boost_rotation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_rotation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="multiwindows.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_boost_rotation.resx">
+      <DependentUpon>Form_boost_rotation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_rotation.resx">
       <DependentUpon>Form_rotation.cs</DependentUpon>
     </EmbeddedResource>
