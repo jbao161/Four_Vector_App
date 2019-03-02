@@ -70,16 +70,26 @@ namespace Four_Vector_App
 
                 Matrix new_position = rotation_matrix.multiply(position_4vector);
 
+                rotation_matrix.print();
                 textBox_rotated_x0.Text = new_position.array[0, 0].ToString();
                 textBox_rotated_x1.Text = new_position.array[1, 0].ToString();
                 textBox_rotated_x2.Text = new_position.array[2, 0].ToString();
                 textBox_rotated_x3.Text = new_position.array[3, 0].ToString();
 
+                if (checkBox_autoupdate_fourvector.Checked) button_updatefourvector_Click(sender, e);
             }
             catch (FormatException)
             {
                 Console.WriteLine("Error converting inputs to numerical values.");
             }
+        }
+
+        private void button_updatefourvector_Click(object sender, EventArgs e)
+        {
+            textBox_x0.Text = textBox_rotated_x0.Text;
+            textBox_x1.Text = textBox_rotated_x1.Text;
+            textBox_x2.Text = textBox_rotated_x2.Text;
+            textBox_x3.Text = textBox_rotated_x3.Text;
         }
     }
 }

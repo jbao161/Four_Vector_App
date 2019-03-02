@@ -94,6 +94,8 @@ namespace Four_Vector_App
                         textBox_x3_boosted.Text = lorentz_boost_position(ct, z, beta, gamma).ToString();
                         break;
                 }
+
+                if (checkBox_autoupdate_fourvector.Checked) button_updatefourvector_boosted_Click(sender, e);
             }
             catch (FormatException)
             {
@@ -143,7 +145,7 @@ namespace Four_Vector_App
                 {
                     for (int j = 1; j < 4; j++)
                     {
-                        lorentz_array[i, j] = (gamma - 1.0) * _beta[i-1] * _beta[j-1] / (beta * beta);
+                        lorentz_array[i, j] = (gamma - 1.0) * _beta[i - 1] * _beta[j - 1] / (beta * beta);
                     }
                 }
                 for (int j = 1; j < 4; j++)
@@ -161,12 +163,13 @@ namespace Four_Vector_App
                 Matrix position_4vector = new Matrix(new double[] { ct, x, y, z });
 
                 Matrix new_position = lorentz_matrix.multiply(position_4vector);
-                new_position.print();
+
                 textBox_3dboosted_x0.Text = new_position.array[0, 0].ToString();
                 textBox_3dboosted_x1.Text = new_position.array[1, 0].ToString();
                 textBox_3dboosted_x2.Text = new_position.array[2, 0].ToString();
                 textBox_3dboosted_x3.Text = new_position.array[3, 0].ToString();
 
+                if (checkBox_autoupdate_fourvector.Checked) button_updatefourvector_3dboosted_Click(sender, e);
             }
             catch (FormatException)
             {
@@ -175,5 +178,20 @@ namespace Four_Vector_App
         }
 
 
+        private void button_updatefourvector_boosted_Click(object sender, EventArgs e)
+        {
+            textBox_x0.Text = textBox_x0_boosted.Text;
+            textBox_x1.Text = textBox_x1_boosted.Text;
+            textBox_x2.Text = textBox_x2_boosted.Text;
+            textBox_x3.Text = textBox_x3_boosted.Text;
+        }
+
+        private void button_updatefourvector_3dboosted_Click(object sender, EventArgs e)
+        {
+            textBox_x0.Text = textBox_3dboosted_x0.Text;
+            textBox_x1.Text = textBox_3dboosted_x1.Text;
+            textBox_x2.Text = textBox_3dboosted_x2.Text;
+            textBox_x3.Text = textBox_3dboosted_x3.Text;
+        }
     }
 }

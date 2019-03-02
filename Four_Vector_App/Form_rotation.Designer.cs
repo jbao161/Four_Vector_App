@@ -45,6 +45,7 @@
             this.label_rotation_unitvector = new System.Windows.Forms.Label();
             this.button_rotate = new System.Windows.Forms.Button();
             this.rotated_fourvector = new System.Windows.Forms.Panel();
+            this.button_updatefourvector = new System.Windows.Forms.Button();
             this.textBox_rotated_x3 = new System.Windows.Forms.TextBox();
             this.textBox_rotated_x2 = new System.Windows.Forms.TextBox();
             this.textBox_rotated_x1 = new System.Windows.Forms.TextBox();
@@ -70,6 +71,7 @@
             this.textBox_matrix_4_2 = new System.Windows.Forms.TextBox();
             this.textBox_matrix_4_1 = new System.Windows.Forms.TextBox();
             this.label_rotationmatrix = new System.Windows.Forms.Label();
+            this.checkBox_autoupdate_fourvector = new System.Windows.Forms.CheckBox();
             this.panel_fourvector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_formula_fourvector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rotation_formula)).BeginInit();
@@ -226,6 +228,7 @@
             // 
             // rotated_fourvector
             // 
+            this.rotated_fourvector.Controls.Add(this.button_updatefourvector);
             this.rotated_fourvector.Controls.Add(this.textBox_rotated_x3);
             this.rotated_fourvector.Controls.Add(this.textBox_rotated_x2);
             this.rotated_fourvector.Controls.Add(this.textBox_rotated_x1);
@@ -233,8 +236,19 @@
             this.rotated_fourvector.Controls.Add(this.pictureBox2);
             this.rotated_fourvector.Location = new System.Drawing.Point(71, 399);
             this.rotated_fourvector.Name = "rotated_fourvector";
-            this.rotated_fourvector.Size = new System.Drawing.Size(638, 39);
+            this.rotated_fourvector.Size = new System.Drawing.Size(780, 51);
             this.rotated_fourvector.TabIndex = 5;
+            // 
+            // button_updatefourvector
+            // 
+            this.button_updatefourvector.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_updatefourvector.Location = new System.Drawing.Point(668, 3);
+            this.button_updatefourvector.Name = "button_updatefourvector";
+            this.button_updatefourvector.Size = new System.Drawing.Size(84, 38);
+            this.button_updatefourvector.TabIndex = 36;
+            this.button_updatefourvector.Text = "Update Four Vector";
+            this.button_updatefourvector.UseVisualStyleBackColor = false;
+            this.button_updatefourvector.Click += new System.EventHandler(this.button_updatefourvector_Click);
             // 
             // textBox_rotated_x3
             // 
@@ -274,7 +288,7 @@
             this.pictureBox2.Image = global::Four_Vector_App.Properties.Resources.Formula_four_vector;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(199, 39);
+            this.pictureBox2.Size = new System.Drawing.Size(199, 51);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -441,11 +455,22 @@
             this.label_rotationmatrix.TabIndex = 69;
             this.label_rotationmatrix.Text = "Rotation Matrix";
             // 
+            // checkBox_autoupdate_fourvector
+            // 
+            this.checkBox_autoupdate_fourvector.AutoSize = true;
+            this.checkBox_autoupdate_fourvector.Location = new System.Drawing.Point(661, 16);
+            this.checkBox_autoupdate_fourvector.Name = "checkBox_autoupdate_fourvector";
+            this.checkBox_autoupdate_fourvector.Size = new System.Drawing.Size(124, 30);
+            this.checkBox_autoupdate_fourvector.TabIndex = 70;
+            this.checkBox_autoupdate_fourvector.Text = "Automatically update\r\n four vector";
+            this.checkBox_autoupdate_fourvector.UseVisualStyleBackColor = true;
+            // 
             // Form_rotation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 830);
+            this.Controls.Add(this.checkBox_autoupdate_fourvector);
             this.Controls.Add(this.label_rotationmatrix);
             this.Controls.Add(this.textBox_matrix_4_4);
             this.Controls.Add(this.textBox_matrix_4_3);
@@ -536,5 +561,7 @@
         private System.Windows.Forms.TextBox textBox_matrix_4_2;
         private System.Windows.Forms.TextBox textBox_matrix_4_1;
         private System.Windows.Forms.Label label_rotationmatrix;
+        private System.Windows.Forms.Button button_updatefourvector;
+        private System.Windows.Forms.CheckBox checkBox_autoupdate_fourvector;
     }
 }

@@ -869,12 +869,12 @@ namespace Four_Vector_App
         }
         public static int levi_cita_3d(int i, int j, int k)
         {
-            if (i == 0 && j == 1 && k == 2) return 1;
-            if (i == 1 && j == 2 && k == 0) return 1;
-            if (i == 2 && j == 0 && k == 1) return 1;
-            if (i == 0 && j == 2 && k == 1) return -1;
-            if (i == 1 && j == 0 && k == 2) return -1;
-            if (i == 2 && j == 1 && k == 0) return -1;
+            if (i == 1 && j == 2 && k == 3) return 1;
+            if (i == 2 && j == 3 && k == 1) return 1;
+            if (i == 3 && j == 1 && k == 2) return 1;
+            if (i == 1 && j == 3 && k == 2) return -1;
+            if (i == 2 && j == 1 && k == 3) return -1;
+            if (i == 3 && j == 2 && k == 1) return -1;
             return 0;
         }
 
@@ -920,12 +920,12 @@ namespace Four_Vector_App
                 {
                     double term1 = (kronecker_delta(i, j) - _n[i] * _n[j]) * Math.Cos(rotation_angle);
                     double levicita_term = 0;
-                    for (int k = 1; k < rotation_vector.Length; k++)
+                    for (int k = 1; k < rotation_array.GetLength(0); k++)
                     {
-                        levicita_term += levi_cita_3d(i, j, k);
+                        levicita_term += levi_cita_3d(i, j, k)*_n[k];
                     }
-                    double term2 = -levicita_term * Math.Sin(rotation_angle) + _n[i] * _n[j];
-                    rotation_array[i, j] = term1 + term2;
+                    double term2 = levicita_term * Math.Sin(rotation_angle) + _n[i] * _n[j];
+                    rotation_array[i, j] = term1 - term2;
                 }
             }
             return rotation_array;

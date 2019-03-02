@@ -40,6 +40,7 @@
             this.label_gammadescription = new System.Windows.Forms.Label();
             this.label_betadescription = new System.Windows.Forms.Label();
             this.panel_fourvector_boosted = new System.Windows.Forms.Panel();
+            this.button_updatefourvector_boosted = new System.Windows.Forms.Button();
             this.textBox_x3_boosted = new System.Windows.Forms.TextBox();
             this.textBox_x2_boosted = new System.Windows.Forms.TextBox();
             this.textBox_x1_boosted = new System.Windows.Forms.TextBox();
@@ -59,7 +60,11 @@
             this.label_lorentz = new System.Windows.Forms.Label();
             this.pictureBox_lorentzmatrix = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_boost3d_normalized = new System.Windows.Forms.Label();
+            this.textBox_3dboostnormal_z = new System.Windows.Forms.TextBox();
             this.label_boostdirection3d = new System.Windows.Forms.Label();
+            this.textBox_3dboostnormal_y = new System.Windows.Forms.TextBox();
+            this.textBox_3dboostnormal_x = new System.Windows.Forms.TextBox();
             this.textBox_boostdirectionz3d = new System.Windows.Forms.TextBox();
             this.textBox_boostdirectiony3d = new System.Windows.Forms.TextBox();
             this.textBox_boostdirectionx3d = new System.Windows.Forms.TextBox();
@@ -71,6 +76,7 @@
             this.textBox_beta3d = new System.Windows.Forms.TextBox();
             this.button_boost3d = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button_updatefourvector_3dboosted = new System.Windows.Forms.Button();
             this.textBox_3dboosted_x3 = new System.Windows.Forms.TextBox();
             this.textBox_3dboosted_x2 = new System.Windows.Forms.TextBox();
             this.textBox_3dboosted_x1 = new System.Windows.Forms.TextBox();
@@ -83,10 +89,7 @@
             this.textBox_betaz3d = new System.Windows.Forms.TextBox();
             this.textBox_betay3d = new System.Windows.Forms.TextBox();
             this.textBox_betax3d = new System.Windows.Forms.TextBox();
-            this.textBox_3dboostnormal_z = new System.Windows.Forms.TextBox();
-            this.textBox_3dboostnormal_y = new System.Windows.Forms.TextBox();
-            this.textBox_3dboostnormal_x = new System.Windows.Forms.TextBox();
-            this.label_boost3d_normalized = new System.Windows.Forms.Label();
+            this.checkBox_autoupdate_fourvector = new System.Windows.Forms.CheckBox();
             this.panel_fourvector.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_formula_fourvector)).BeginInit();
             this.panel_lorentzresult.SuspendLayout();
@@ -222,6 +225,7 @@
             // 
             // panel_fourvector_boosted
             // 
+            this.panel_fourvector_boosted.Controls.Add(this.button_updatefourvector_boosted);
             this.panel_fourvector_boosted.Controls.Add(this.textBox_x3_boosted);
             this.panel_fourvector_boosted.Controls.Add(this.textBox_x2_boosted);
             this.panel_fourvector_boosted.Controls.Add(this.textBox_x1_boosted);
@@ -229,8 +233,19 @@
             this.panel_fourvector_boosted.Controls.Add(this.pictureBox_fourvector_boosted);
             this.panel_fourvector_boosted.Location = new System.Drawing.Point(23, 272);
             this.panel_fourvector_boosted.Name = "panel_fourvector_boosted";
-            this.panel_fourvector_boosted.Size = new System.Drawing.Size(638, 39);
+            this.panel_fourvector_boosted.Size = new System.Drawing.Size(747, 39);
             this.panel_fourvector_boosted.TabIndex = 13;
+            // 
+            // button_updatefourvector_boosted
+            // 
+            this.button_updatefourvector_boosted.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_updatefourvector_boosted.Location = new System.Drawing.Point(660, 0);
+            this.button_updatefourvector_boosted.Name = "button_updatefourvector_boosted";
+            this.button_updatefourvector_boosted.Size = new System.Drawing.Size(84, 38);
+            this.button_updatefourvector_boosted.TabIndex = 36;
+            this.button_updatefourvector_boosted.Text = "Update Four Vector";
+            this.button_updatefourvector_boosted.UseVisualStyleBackColor = false;
+            this.button_updatefourvector_boosted.Click += new System.EventHandler(this.button_updatefourvector_boosted_Click);
             // 
             // textBox_x3_boosted
             // 
@@ -436,6 +451,24 @@
             this.panel1.Size = new System.Drawing.Size(1010, 332);
             this.panel1.TabIndex = 2;
             // 
+            // label_boost3d_normalized
+            // 
+            this.label_boost3d_normalized.AutoSize = true;
+            this.label_boost3d_normalized.Location = new System.Drawing.Point(170, 267);
+            this.label_boost3d_normalized.Name = "label_boost3d_normalized";
+            this.label_boost3d_normalized.Size = new System.Drawing.Size(57, 13);
+            this.label_boost3d_normalized.TabIndex = 34;
+            this.label_boost3d_normalized.Text = "normalized";
+            // 
+            // textBox_3dboostnormal_z
+            // 
+            this.textBox_3dboostnormal_z.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_3dboostnormal_z.Location = new System.Drawing.Point(452, 264);
+            this.textBox_3dboostnormal_z.Name = "textBox_3dboostnormal_z";
+            this.textBox_3dboostnormal_z.ReadOnly = true;
+            this.textBox_3dboostnormal_z.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboostnormal_z.TabIndex = 10;
+            // 
             // label_boostdirection3d
             // 
             this.label_boostdirection3d.AutoSize = true;
@@ -445,6 +478,24 @@
             this.label_boostdirection3d.Size = new System.Drawing.Size(213, 33);
             this.label_boostdirection3d.TabIndex = 33;
             this.label_boostdirection3d.Text = "Boost Direction";
+            // 
+            // textBox_3dboostnormal_y
+            // 
+            this.textBox_3dboostnormal_y.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_3dboostnormal_y.Location = new System.Drawing.Point(346, 264);
+            this.textBox_3dboostnormal_y.Name = "textBox_3dboostnormal_y";
+            this.textBox_3dboostnormal_y.ReadOnly = true;
+            this.textBox_3dboostnormal_y.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboostnormal_y.TabIndex = 9;
+            // 
+            // textBox_3dboostnormal_x
+            // 
+            this.textBox_3dboostnormal_x.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox_3dboostnormal_x.Location = new System.Drawing.Point(240, 264);
+            this.textBox_3dboostnormal_x.Name = "textBox_3dboostnormal_x";
+            this.textBox_3dboostnormal_x.ReadOnly = true;
+            this.textBox_3dboostnormal_x.Size = new System.Drawing.Size(100, 20);
+            this.textBox_3dboostnormal_x.TabIndex = 8;
             // 
             // textBox_boostdirectionz3d
             // 
@@ -539,6 +590,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button_updatefourvector_3dboosted);
             this.panel3.Controls.Add(this.textBox_3dboosted_x3);
             this.panel3.Controls.Add(this.textBox_3dboosted_x2);
             this.panel3.Controls.Add(this.textBox_3dboosted_x1);
@@ -546,8 +598,19 @@
             this.panel3.Controls.Add(this.pictureBox_boosted3d);
             this.panel3.Location = new System.Drawing.Point(25, 290);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(638, 39);
+            this.panel3.Size = new System.Drawing.Size(732, 39);
             this.panel3.TabIndex = 22;
+            // 
+            // button_updatefourvector_3dboosted
+            // 
+            this.button_updatefourvector_3dboosted.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_updatefourvector_3dboosted.Location = new System.Drawing.Point(648, 0);
+            this.button_updatefourvector_3dboosted.Name = "button_updatefourvector_3dboosted";
+            this.button_updatefourvector_3dboosted.Size = new System.Drawing.Size(84, 38);
+            this.button_updatefourvector_3dboosted.TabIndex = 35;
+            this.button_updatefourvector_3dboosted.Text = "Update Four Vector";
+            this.button_updatefourvector_3dboosted.UseVisualStyleBackColor = false;
+            this.button_updatefourvector_3dboosted.Click += new System.EventHandler(this.button_updatefourvector_3dboosted_Click);
             // 
             // textBox_3dboosted_x3
             // 
@@ -660,51 +723,26 @@
             this.textBox_betax3d.Size = new System.Drawing.Size(100, 20);
             this.textBox_betax3d.TabIndex = 4;
             // 
-            // textBox_3dboostnormal_z
+            // checkBox_autoupdate_fourvector
             // 
-            this.textBox_3dboostnormal_z.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox_3dboostnormal_z.Location = new System.Drawing.Point(452, 264);
-            this.textBox_3dboostnormal_z.Name = "textBox_3dboostnormal_z";
-            this.textBox_3dboostnormal_z.ReadOnly = true;
-            this.textBox_3dboostnormal_z.Size = new System.Drawing.Size(100, 20);
-            this.textBox_3dboostnormal_z.TabIndex = 10;
+            this.checkBox_autoupdate_fourvector.AutoSize = true;
+            this.checkBox_autoupdate_fourvector.Location = new System.Drawing.Point(666, 16);
+            this.checkBox_autoupdate_fourvector.Name = "checkBox_autoupdate_fourvector";
+            this.checkBox_autoupdate_fourvector.Size = new System.Drawing.Size(124, 30);
+            this.checkBox_autoupdate_fourvector.TabIndex = 71;
+            this.checkBox_autoupdate_fourvector.Text = "Automatically update\r\n four vector";
+            this.checkBox_autoupdate_fourvector.UseVisualStyleBackColor = true;
             // 
-            // textBox_3dboostnormal_y
-            // 
-            this.textBox_3dboostnormal_y.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox_3dboostnormal_y.Location = new System.Drawing.Point(346, 264);
-            this.textBox_3dboostnormal_y.Name = "textBox_3dboostnormal_y";
-            this.textBox_3dboostnormal_y.ReadOnly = true;
-            this.textBox_3dboostnormal_y.Size = new System.Drawing.Size(100, 20);
-            this.textBox_3dboostnormal_y.TabIndex = 9;
-            // 
-            // textBox_3dboostnormal_x
-            // 
-            this.textBox_3dboostnormal_x.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox_3dboostnormal_x.Location = new System.Drawing.Point(240, 264);
-            this.textBox_3dboostnormal_x.Name = "textBox_3dboostnormal_x";
-            this.textBox_3dboostnormal_x.ReadOnly = true;
-            this.textBox_3dboostnormal_x.Size = new System.Drawing.Size(100, 20);
-            this.textBox_3dboostnormal_x.TabIndex = 8;
-            // 
-            // label_boost3d_normalized
-            // 
-            this.label_boost3d_normalized.AutoSize = true;
-            this.label_boost3d_normalized.Location = new System.Drawing.Point(170, 267);
-            this.label_boost3d_normalized.Name = "label_boost3d_normalized";
-            this.label_boost3d_normalized.Size = new System.Drawing.Size(57, 13);
-            this.label_boost3d_normalized.TabIndex = 34;
-            this.label_boost3d_normalized.Text = "normalized";
-            // 
-            // Main_window
+            // Form_LorentzBoost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 727);
+            this.Controls.Add(this.checkBox_autoupdate_fourvector);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel_lorentzresult);
             this.Controls.Add(this.panel_fourvector);
-            this.Name = "Main_window";
+            this.Name = "Form_LorentzBoost";
             this.Text = "Four Vector App";
             this.panel_fourvector.ResumeLayout(false);
             this.panel_fourvector.PerformLayout();
@@ -727,6 +765,7 @@
             this.panel_beta3d.ResumeLayout(false);
             this.panel_beta3d.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -791,6 +830,9 @@
         private System.Windows.Forms.TextBox textBox_3dboostnormal_z;
         private System.Windows.Forms.TextBox textBox_3dboostnormal_y;
         private System.Windows.Forms.TextBox textBox_3dboostnormal_x;
+        private System.Windows.Forms.Button button_updatefourvector_boosted;
+        private System.Windows.Forms.Button button_updatefourvector_3dboosted;
+        private System.Windows.Forms.CheckBox checkBox_autoupdate_fourvector;
     }
 }
 
