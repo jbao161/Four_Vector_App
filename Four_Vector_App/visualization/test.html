@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="calculation.js"></script>
+    <style>
+    </style>
+    <div id="title">
+        General Lorentz Transformation (Boost and Rotation)
+    </div>
+    <hr />
+    <div id="4vector">
+        <span class="auto-style1">Four vector</span><br /><br />
+        X_(1,2,3,4) = (<input id="x1" type="text" />,
+        <input id="x2" type="text" />,
+        <input id="x3" type="text" />,
+        <input id="x4" type="text" />)<br />
+        <br />
+        <input id="auto_update" type="checkbox" />Automatically update four vector
+    </div>
+
+    <div id="lorentzboost">
+        <hr />
+        <span class="auto-style1">Lorentz Boost in arbitrary direction</span><br />
+        <br />
+        Boost direction vector (<input id="boost_x" type="text" />,
+        <input id="boost_y" type="text" />,
+        <input id="boost_z" type="text" />)<br />
+        <br />
+        Normalized direction vector (<input id="boost_n_x" readonly="readonly" type="text" aria-readonly="False" style="background-color: #C0C0C0" />,
+        <input id="boost_n_y" readonly="readonly" type="text" aria-readonly="False" style="background-color: #C0C0C0" />,
+        <input id="boost_n_z" readonly="readonly" type="text" aria-readonly="False" style="background-color: #C0C0C0" />)<br />
+        <br />
+        Beta (Ratio of relative velocity to speed of light) =
+        <input id="beta" type="text" /><br />
+        <br />
+        Gamma (Lorentz factor) =
+        <input id="gamma" readonly="readonly" type="text" style="background-color: #C0C0C0" /><br />
+        <br />
+        Beta_(x,y,z) = (<input id="beta_x" readonly="readonly" type="text" style="background-color: #C0C0C0" />,
+        <input id="beta_y" readonly="readonly" type="text" style="background-color: #C0C0C0" />,
+        <input id="beta_z" readonly="readonly" type="text" style="background-color: #C0C0C0" />)
+    </div>
+    <div id="controls">
+        <input id="Button_boost" type="button" value="Boost" />
+    </div>
+    <div id="Output">
+        X_(1,2,3,4) = (<input id="out_x1" type="text" style="background-color: #C0C0C0" />,
+        <input id="out_x2" type="text" style="background-color: #C0C0C0" />,
+        <input id="out_x3" type="text" style="background-color: #C0C0C0" />,
+        <input id="out_x4" type="text" style="background-color: #C0C0C0" />)&nbsp;
+        <input id="Button_update" type="button" value="Replace Input" />
+    </div>
+</body>
+</html>

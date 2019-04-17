@@ -1,79 +1,12 @@
 <!doctype html>
 <html>
 <head>
-	<title>Graph 3D demo</title>
-
-	<style>
-		body {
-			font: 10pt arial;
-		}
-
-		#info {
-			height: 453px;
-		}
-
-		.auto-style1 {
-			font-size: x-large;
-		}
-
-		#title {
-			font-size: x-large;
-		}
-
-	</style>
-
-	<script type="text/javascript" src="vis.custom.js"></script>
-	<script type="text/javascript" src="calculation.js"></script>
-	<script type="text/javascript">
-		var data = null;
-		var graph = null;
-
-		// Called when the Visualization API is loaded.
-		function drawVisualization() {
-			// Create and populate a data table.
-			data = new vis.DataSet();
-			data.add({ id: 0, x: 0, y: 0, z: 0, style: 0 });
-			var counter = 0;
-			var steps = 50;  // number of datapoints will be steps*steps
-			var axisMax = 314;
-			var axisStep = axisMax / steps;
-			//for (var x = 0; x < axisMax; x+=axisStep) {
-
-			data.add({ id: 1, x: 3, y: -1, z: 2, style: 0 });
-
-			//}
-
-			// specify options
-			var options = {
-				width: '500px',
-				height: '552px',
-				style: 'line',
-				showPerspective: true,
-				showGrid: true,
-				// showGrid: false,
-				showShadow: false,
-				keepAspectRatio: true,
-				verticalRatio: 1,
-				tooltip: true,
-				zMin: -5,
-				zMax: 5,
-				yMin: -5,
-				yMax: 5,
-				xMin: -5,
-				xMax: 5,
-			};
-
-			// Instantiate our graph object.
-			var container = document.getElementById('mygraph');
-			graph = new vis.Graph3d(container, data, options);
-		}
-	</script>
-
+    <title>Graph 3D demo</title>
+    <!--<script type="text/javascript" src="vis.custom.js"></script> -->
+    <script type="text/javascript" src="calculation.js"></script>
 </head>
 
-<body onload="drawVisualization();">
-	<style>
-	</style>
+<body>
 	<div id="title">
 		General Lorentz Transformation (Boost and Rotation)
 	</div>
@@ -110,6 +43,14 @@
 		<input id="beta_y" readonly="readonly" type="text" style="background-color: #C0C0C0" />,
 		<input id="beta_z" readonly="readonly" type="text" style="background-color: #C0C0C0" />)
 	</div>
+    <div id="controls">
+        <input id="Button_boost" type="button" value="Boost" /></div>
+    <div id="Output">
+		X_(1,2,3,4) = (<input id="out_x1" type="text" style="background-color: #C0C0C0" />,
+		<input id="out_x2" type="text" style="background-color: #C0C0C0" />,
+		<input id="out_x3" type="text" style="background-color: #C0C0C0" />,
+		<input id="out_x4" type="text" style="background-color: #C0C0C0" />)&nbsp;
+        <input id="Button_update" type="button" value="Replace Input" /></div>
 </body>
 </html>
 
