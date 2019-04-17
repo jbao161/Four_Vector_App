@@ -1,14 +1,44 @@
-matrix_multiply = function  (array1, array2) {
+function multiply(a, b) {
+    var aNumRows = a.length, aNumCols = a[0].length,
+        bNumRows = b.length, bNumCols = b[0].length,
+        m = new Array(aNumRows);  // initialize array of rows
+    for (var r = 0; r < aNumRows; ++r) {
+        m[r] = new Array(bNumCols); // initialize the current row
+        for (var c = 0; c < bNumCols; ++c) {
+            m[r][c] = 0;             // initialize the current cell
+            for (var i = 0; i < aNumCols; ++i) {
+                m[r][c] += a[r][i] * b[i][c];
+            }
+        }
+    }
+    return m;
+}
+
+function display(m) {
+    for (var r = 0; r < m.length; ++r) {
+        document.write('&nbsp;&nbsp;' + m[r].join(' ') + '<br />');
+    }
+}
+
+var a = [[8], [2], [3]],
+    b = [[1, 2, 3]];
+document.write('matrix a:<br />');
+display(a);
+document.write('matrix b:<br />');
+display(b);
+document.write('a * b =<br />');
+display(multiply(a, b));
+
+matrix_multiply = function (array1, array2) {
     var dim1 = array1[0].length;
     var dim2 = array2.length;
+
+    var rows = array1.length;
+    var cols = array2[0].length;
+
     if (dim1 != dim2) {
         return null;
     }
-    var rows = array1.length;
-    window.alert(rows);
-    var cols = array2[0].length;
-    window.alert(cols);
-
     var result_elements = new Array[rows];
     var entry;
     var i, j, m;
@@ -17,7 +47,7 @@ matrix_multiply = function  (array1, array2) {
         for (j = 0; j < cols; j++) {
             entry = 0;
             for (m = 0; m < dim1; m++) {
-                entry += array1[i, m] * array2[m, j];
+                entry += array1[i][m] * array2[m][j];
             }
             result_elements[i][j] = entry;
         }
@@ -62,7 +92,7 @@ function button_boost3d_Click_HTML()
         var betax = beta / boost_norm * boostx;
         var betay = beta / boost_norm * boosty;
         var betaz = beta / boost_norm * boostz;
-        var _beta = { betax, betay, betaz };
+        var _beta = [ betax, betay, betaz ];
         document.getElementById("beta_x").value = betax.toString();
         document.getElementById("beta_y").value = betay.toString();
         document.getElementById("beta_z").value = betaz.toString();
@@ -70,25 +100,27 @@ function button_boost3d_Click_HTML()
         document.getElementById("boost_n_y").value = (boosty / boost_norm).toString();
         document.getElementById("boost_n_z").value = (boostz / boost_norm).toString();
 
-        var lorentz_array = new array_2d(4,4);
-        lorentz_array[0, 0] = gamma;
-        var i,j;
+        var lorentz_array = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+        
+        lorentz_array[0][0] = gamma;
         for ( i = 1; i < 4; i++)
         {
-            lorentz_array[i, 0] = -1.0 * gamma * _beta[i - 1];
-            lorentz_array[0, i] = -1.0 * gamma * _beta[i - 1];
+            lorentz_array[i][0] = -1.0 * gamma * _beta[i - 1];
+            lorentz_array[0][i] = -1.0 * gamma * _beta[i - 1];
         }
         for ( i = 1; i < 4; i++)
         {
             for ( j = 1; j < 4; j++)
             {
-                lorentz_array[i, j] = (gamma - 1.0) * _beta[i - 1] * _beta[j - 1] / (beta * beta);
+                lorentz_array[i][j] = (gamma - 1.0) * _beta[i - 1] * _beta[j - 1] / (beta * beta);
             }
         }
         for ( j = 1; j < 4; j++)
         {
-            lorentz_array[j, j] += 1;
+            lorentz_array[j][j] += 1;
         }
+
+        console.table(lorentz_array);
 
         if (document.getElementById("x1").value == "") document.getElementById("x1").value = "0";
         if (document.getElementById("x2").value == "") document.getElementById("x2").value = "0";
@@ -99,16 +131,14 @@ function button_boost3d_Click_HTML()
         var y = parseFloat(document.getElementById("x3").value);
         var z = parseFloat(document.getElementById("x4").value);
 
-        var temp_vector = [ct, x, y, z];
-        var position_4vector = [];
-        position_4vector.push(temp_vector);
-
-        var new_position = matrix_multiply(lorentz_array,position_4vector);
-
+        var position_4vector = [[ct] ,[x] ,[y] ,[z]];
+        console.table(position_4vector);
+        var new_position = multiply(lorentz_array,position_4vector);
+        console.table(new_position);
         document.getElementById("out_x1").value = new_position[0, 0].toString();
-        document.getElementById("out_x2").value = new_position[1, 0].toString();
-        document.getElementById("out_x3").value = new_position[2, 0].toString();
-        document.getElementById("out_x4").value = new_position[3, 0].toString();
+        document.getElementById("out_x2").value = new_position[0, 1].toString();
+        document.getElementById("out_x3").value = new_position[0, 2].toString();
+        document.getElementById("out_x4").value = new_position[0, 3].toString();
 
         //if (document.getElementById("auto_update").checked) button_updatefourvector_Click(sender, e);
     }
