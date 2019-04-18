@@ -1,34 +1,3 @@
-function multiply(a, b) {
-    var aNumRows = a.length, aNumCols = a[0].length,
-        bNumRows = b.length, bNumCols = b[0].length,
-        m = new Array(aNumRows);  // initialize array of rows
-    for (var r = 0; r < aNumRows; ++r) {
-        m[r] = new Array(bNumCols); // initialize the current row
-        for (var c = 0; c < bNumCols; ++c) {
-            m[r][c] = 0;             // initialize the current cell
-            for (var i = 0; i < aNumCols; ++i) {
-                m[r][c] += a[r][i] * b[i][c];
-            }
-        }
-    }
-    return m;
-}
-
-function display(m) {
-    for (var r = 0; r < m.length; ++r) {
-        document.write('&nbsp;&nbsp;' + m[r].join(' ') + '<br />');
-    }
-}
-
-var a = [[8], [2], [3]],
-    b = [[1, 2, 3]];
-document.write('matrix a:<br />');
-display(a);
-document.write('matrix b:<br />');
-display(b);
-document.write('a * b =<br />');
-display(multiply(a, b));
-
 matrix_multiply = function (array1, array2) {
     var dim1 = array1[0].length;
     var dim2 = array2.length;
@@ -39,11 +8,11 @@ matrix_multiply = function (array1, array2) {
     if (dim1 != dim2) {
         return null;
     }
-    var result_elements = new Array[rows];
+    var result_elements = new Array(rows);
     var entry;
     var i, j, m;
     for (i = 0; i < rows; i++) {
-        result_elements[i] = new Array[cols];
+        result_elements[i] = new Array(cols);
         for (j = 0; j < cols; j++) {
             entry = 0;
             for (m = 0; m < dim1; m++) {
@@ -66,6 +35,7 @@ function array_2d(rows, cols){
     }
     return elements;
 }
+
  function calculate_gamma( beta)
 {
 	if (beta > -1.0 && beta < 1.0)
@@ -74,7 +44,6 @@ function array_2d(rows, cols){
 	}
 	return NaN;
 }
-
 
 function button_boost3d_Click_HTML()
 {
@@ -119,7 +88,7 @@ function button_boost3d_Click_HTML()
         {
             lorentz_array[j][j] += 1;
         }
-
+        if (beta == 0) lorentz_array = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]];
         console.table(lorentz_array);
 
         if (document.getElementById("x1").value == "") document.getElementById("x1").value = "0";
@@ -133,7 +102,7 @@ function button_boost3d_Click_HTML()
 
         var position_4vector = [[ct] ,[x] ,[y] ,[z]];
         console.table(position_4vector);
-        var new_position = multiply(lorentz_array,position_4vector);
+        var new_position = matrix_multiply(lorentz_array,position_4vector);
         console.table(new_position);
         document.getElementById("out_x1").value = new_position[0, 0].toString();
         document.getElementById("out_x2").value = new_position[0, 1].toString();
@@ -144,8 +113,6 @@ function button_boost3d_Click_HTML()
     }
     catch (error) {
         console.error(error);
-        // expected output: ReferenceError: nonExistentFunction is not defined
-        // Note - error messages will vary depending on browser
     }
 }
 //function button_updatefourvector_Click()
@@ -260,7 +227,7 @@ function button_boost3d_Click_HTML()
 //}
 
 
-window.addEventListener("load", function () { document.getElementById("Button_boost").addEventListener("click", button_boost3d_Click_HTML); });
+
 
 //function button_boost3d_Click()
 //{

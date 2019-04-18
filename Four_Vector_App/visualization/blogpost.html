@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <style type="text/css">
+        #Button_boost {
+            width: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+        matrix_multiply = function (array1, array2) {
+            var dim1 = array1[0].length;
+            var dim2 = array2.length;
+
+            var rows = array1.length;
+            var cols = array2[0].length;
+
+            if (dim1 != dim2) {
+                return null;
+            }
+            var result_elements = new Array(rows);
+            var entry;
+            var i, j, m;
+            for (i = 0; i < rows; i++) {
+                result_elements[i] = new Array(cols);
+                for (j = 0; j < cols; j++) {
+                    entry = 0;
+                    for (m = 0; m < dim1; m++) {
+                        entry += array1[i][m] * array2[m][j];
+                    }
+                    result_elements[i][j] = entry;
+                }
+            }
+            return result_elements;
+        };
+
+        function array_2d(rows, cols) {
+            var elements = new Array(rows);
+            var i, j;
+            for (i = 0; i < rows; i++) {
+                elements[i] = new Array(cols);
+                for (j = 0; j < cols; j++) {
+                    elements[i][j] = 0;
+                }
+            }
+            return elements;
+        }
+        function calculate_gamma(beta) {
+            if (beta > -1.0 && beta < 1.0) {
+                return 1.0 / Math.sqrt(1.0 - beta * beta);
+            }
+            return NaN;
+        }
+
+        function button_boost3d_Click_HTML() {
+            try {
+                var beta = parseFloat(document.getElementById("beta").value);
+                var gamma = calculate_gamma(beta);
+                if (isNaN(gamma)) {
+                    return;
+                }
+                document.getElementById("gamma").value = gamma.toString();
+                var boostx = parseFloat(boost_x.value);
+                var boosty = parseFloat(boost_y.value);
+                var boostz = parseFloat(boost_z.value);
+                var boost_norm = Math.sqrt(boostx * boostx + boosty * boosty + boostz * boostz);
+                var betax = beta / boost_norm * boostx;
+                var betay = beta / boost_norm * boosty;
+                var betaz = beta / boost_norm * boostz;
+                var _beta = [betax, betay, betaz];
+                document.getElementById("beta_x").value = betax.toString();
+                document.getElementById("beta_y").value = betay.toString();
+                document.getElementById("beta_z").value = betaz.toString();
+                document.getElementById("boost_n_x").value = (boostx / boost_norm).toString();
+                document.getElementById("boost_n_y").value = (boosty / boost_norm).toString();
+                document.getElementById("boost_n_z").value = (boostz / boost_norm).toString();
+
+                var lorentz_array = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+
+                lorentz_array[0][0] = gamma;
+                for (i = 1; i < 4; i++) {
+                    lorentz_array[i][0] = -1.0 * gamma * _beta[i - 1];
+                    lorentz_array[0][i] = -1.0 * gamma * _beta[i - 1];
+                }
+                for (i = 1; i < 4; i++) {
+                    for (j = 1; j < 4; j++) {
+                        lorentz_array[i][j] = (gamma - 1.0) * _beta[i - 1] * _beta[j - 1] / (beta * beta);
+                    }
+                }
+                for (j = 1; j < 4; j++) {
+                    lorentz_array[j][j] += 1;
+                }
+                if (beta == 0) lorentz_array = [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]];
+                console.table(lorentz_array);
+
+                if (document.getElementById("x1").value == "") document.getElementById("x1").value = "0";
+                if (document.getElementById("x2").value == "") document.getElementById("x2").value = "0";
+                if (document.getElementById("x3").value == "") document.getElementById("x3").value = "0";
+                if (document.getElementById("x4").value == "") document.getElementById("x4").value = "0";
+                var ct = parseFloat(document.getElementById("x1").value);
+                var x = parseFloat(document.getElementById("x2").value);
+                var y = parseFloat(document.getElementById("x3").value);
+                var z = parseFloat(document.getElementById("x4").value);
+
+                var position_4vector = [[ct], [x], [y], [z]];
+                console.table(position_4vector);
+                var new_position = matrix_multiply(lorentz_array, position_4vector);
+                console.table(new_position);
+                document.getElementById("out_x1").value = new_position[0, 0].toString();
+                document.getElementById("out_x2").value = new_position[0, 1].toString();
+                document.getElementById("out_x3").value = new_position[0, 2].toString();
+                document.getElementById("out_x4").value = new_position[0, 3].toString();
+
+                //if (document.getElementById("auto_update").checked) button_updatefourvector_Click(sender, e);
+            }
+            catch (error) {
+                console.error(error);
+            }
+        }
+        window.addEventListener("load", function () { document.getElementById("Button_boost").addEventListener("click", button_boost3d_Click_HTML); });
+    </script>
+    <div id="title">
+        General Lorentz Transformation (Boost and Rotation)
+    </div>
+    <hr />
+    <div id="4vector">
+        <span class="auto-style1">Four vector</span><br /><br />
+        X_(1,2,3,4) = (<input id="x1" type="text" />,
+        <input id="x2" type="text" />,
+        <input id="x3" type="text" />,
+        <input id="x4" type="text" />)<br />
+        <br />
+        <input id="auto_update" type="checkbox" />Automatically update four vector
+    </div>
+
+    <div id="lorentzboost">
+        <hr />
+        <span class="auto-style1">Lorentz Boost in arbitrary direction</span><br />
+        <br />
+        Boost direction vector (<input id="boost_x" type="text" />,
+        <input id="boost_y" type="text" />,
+        <input id="boost_z" type="text" />)<br />
+        <br />
+        Normalized direction vector (<input id="boost_n_x" readonly="readonly" type="text" aria-readonly="False" style="background-color: #C0C0C0" />,
+        <input id="boost_n_y" readonly="readonly" type="text" aria-readonly="False" style="background-color: #C0C0C0" />,
+        <input id="boost_n_z" readonly="readonly" type="text" aria-readonly="False" style="background-color: #C0C0C0" />)<br />
+        <br />
+        Beta (Ratio of relative velocity to speed of light) =
+        <input id="beta" type="text" /><br />
+        <br />
+        Gamma (Lorentz factor) =
+        <input id="gamma" readonly="readonly" type="text" style="background-color: #C0C0C0" /><br />
+        <br />
+        Beta_(x,y,z) = (<input id="beta_x" readonly="readonly" type="text" style="background-color: #C0C0C0" />,
+        <input id="beta_y" readonly="readonly" type="text" style="background-color: #C0C0C0" />,
+        <input id="beta_z" readonly="readonly" type="text" style="background-color: #C0C0C0" />)
+    </div>
+    <div id="controls">
+        <input id="Button_boost" type="button" value="Boost" style="background-color: #FFFFFF"/>
+    </div>
+    <div id="Output">
+        X_(1,2,3,4) = (<input id="out_x1" type="text" style="background-color: #C0C0C0" />,
+        <input id="out_x2" type="text" style="background-color: #C0C0C0" />,
+        <input id="out_x3" type="text" style="background-color: #C0C0C0" />,
+        <input id="out_x4" type="text" style="background-color: #C0C0C0" />)&nbsp;
+        <input id="Button_update" type="button" value="Replace Input" />
+    </div>
+</body>
+</html>
