@@ -5029,9 +5029,9 @@ return /******/ (function(modules) { // webpackBootstrap
     //   ctx.stroke();
     // }
 
-    // ACADEMO
+      // ACADEMO
 
-    //first line
+      //first line
       point = this.dataPoints[0];
       ctx.lineWidth = 1;    // TODO: make customizable
       ctx.strokeStyle = 'blue'; // TODO: make customizable
@@ -5040,51 +5040,50 @@ return /******/ (function(modules) { // webpackBootstrap
       ctx.lineTo(this.dataPoints[1].screen.x, this.dataPoints[1].screen.y);
       ctx.stroke();
 
-     //second line
-     point = this.dataPoints[0];
-     ctx.lineWidth = 1;    // TODO: make customizable
-     ctx.strokeStyle = 'red'; // TODO: make customizable
-     ctx.beginPath();
-     ctx.moveTo(point.screen.x, point.screen.y);
-     ctx.lineTo(this.dataPoints[2].screen.x, this.dataPoints[2].screen.y);
-     ctx.stroke();
+      //second line
+      point = this.dataPoints[2];
+      ctx.lineWidth = 1;    // TODO: make customizable
+      ctx.strokeStyle = 'red'; // TODO: make customizable
+      ctx.beginPath();
+      ctx.moveTo(point.screen.x, point.screen.y);
+      ctx.lineTo(this.dataPoints[3].screen.x, this.dataPoints[3].screen.y);
+      ctx.stroke();
 
-     //third line
-     point = this.dataPoints[0];
-     ctx.lineWidth = 1;    // TODO: make customizable
-     ctx.strokeStyle = 'green'; // TODO: make customizable
-     ctx.beginPath();
-     ctx.moveTo(point.screen.x, point.screen.y);
-     ctx.lineTo(this.dataPoints[3].screen.x, this.dataPoints[3].screen.y);
-     ctx.stroke();
+      //third line
+      point = this.dataPoints[4];
+      ctx.lineWidth = 1;    // TODO: make customizable
+      ctx.strokeStyle = 'green'; // TODO: make customizable
+      ctx.beginPath();
+      ctx.moveTo(point.screen.x, point.screen.y);
+      ctx.lineTo(this.dataPoints[5].screen.x, this.dataPoints[5].screen.y);
+      ctx.stroke();
 
-     //fourth line
-     point = this.dataPoints[0];
-     ctx.lineWidth = 1;    // TODO: make customizable
-     ctx.strokeStyle = 'purple'; // TODO: make customizable
-     ctx.beginPath();
-     ctx.moveTo(point.screen.x, point.screen.y);
-     ctx.lineTo(this.dataPoints[4].screen.x, this.dataPoints[4].screen.y);
-     ctx.stroke();
+      //fourth line
+      point = this.dataPoints[6];
+      ctx.lineWidth = 1;    // TODO: make customizable
+      ctx.strokeStyle = 'purple'; // TODO: make customizable
+      ctx.beginPath();
+      ctx.moveTo(point.screen.x, point.screen.y);
+      ctx.lineTo(this.dataPoints[7].screen.x, this.dataPoints[7].screen.y);
+      ctx.stroke();
 
-     //fifth line
-     point = this.dataPoints[0];
-     ctx.lineWidth = 1;    // TODO: make customizable
-     ctx.strokeStyle = 'turquoise'; // TODO: make customizable
-     ctx.beginPath();
-     ctx.moveTo(point.screen.x, point.screen.y);
-     ctx.lineTo(this.dataPoints[5].screen.x, this.dataPoints[5].screen.y);
-     ctx.stroke();
+      //fifth line
+      point = this.dataPoints[8];
+      ctx.lineWidth = 1;    // TODO: make customizable
+      ctx.strokeStyle = 'turquoise'; // TODO: make customizable
+      ctx.beginPath();
+      ctx.moveTo(point.screen.x, point.screen.y);
+      ctx.lineTo(this.dataPoints[9].screen.x, this.dataPoints[9].screen.y);
+      ctx.stroke();
 
-     //sixth line
-     point = this.dataPoints[0];
-     ctx.lineWidth = 1;    // TODO: make customizable
-     ctx.strokeStyle = 'orange'; // TODO: make customizable
-     ctx.beginPath();
-     ctx.moveTo(point.screen.x, point.screen.y);
-     ctx.lineTo(this.dataPoints[6].screen.x, this.dataPoints[6].screen.y);
-     ctx.stroke();
-
+      //sixth line
+      point = this.dataPoints[10];
+      ctx.lineWidth = 1;    // TODO: make customizable
+      ctx.strokeStyle = 'orange'; // TODO: make customizable
+      ctx.beginPath();
+      ctx.moveTo(point.screen.x, point.screen.y);
+      ctx.lineTo(this.dataPoints[11].screen.x, this.dataPoints[11].screen.y);
+      ctx.stroke();
 
   };
 

@@ -7,7 +7,7 @@
     <script type="text/javascript">
    
         window.addEventListener("load", function () { document.getElementById("Button_boost").addEventListener("click", button_boost3d_Click_HTML); });
-        window.addEventListener("load", function () { document.getElementById("Button_boost").addEventListener("click", drawVisualization); });
+        window.addEventListener("load", function () { document.getElementById("Button_boost").addEventListener("click", plotvector); });
   </script>
     <style type="text/css">
         #Button_boost {
@@ -26,15 +26,16 @@
     // Called when the Visualization API is loaded.
     function drawVisualization() {
         
-			data = new vis.DataSet();
-        data.add({ id: 0, x: 0, y: 0, z: 0, style: 0 });
-        data.add({id:1,x:1,y:1,z:1,style:0});
+	    data = new vis.DataSet();
+        data.add({ id: 0, x: 0, y: 0, z: 0, style: 'green' });
+        data.add({ id: 1, x: 1, y: 1, z: 1, style: 'red' });
+        data.add({ id: 2, x: 3, y: 2, z: 3, style: 'red' });
+        //data.add({id:3,x:4,y:4,z:4,style:'red'});
 			var options = {
 			    style: 'line',
 			    showPerspective: true,
 			    showGrid: true,
-			    // showGrid: false,
-			    showShadow: false,
+			    showShadow: true,
 			    keepAspectRatio: true,
 			    verticalRatio: 1,
 			    tooltip: true,
@@ -47,7 +48,51 @@
 			};
 
         graph = new vis.Graph3d(document.getElementById('mygraph'), data, options);
+        vis.Graph3d._redrawDataLine();
 
+    }
+    // called when vector calculated
+    function plotvector() {
+        
+        data = new vis.DataSet();
+        var ct = parseFloat(document.getElementById("x1").value);
+        var x = parseFloat(document.getElementById("x2").value);
+        var y = parseFloat(document.getElementById("x3").value);
+        var z = parseFloat(document.getElementById("x4").value);
+        var ct2 = parseFloat(document.getElementById("out_x1").value);
+        var x2 = parseFloat(document.getElementById("out_x2").value);
+        var y2 = parseFloat(document.getElementById("out_x3").value);
+        var z2 = parseFloat(document.getElementById("out_x4").value);
+        var time_change = ct2 - ct;
+        var velocity = parseFloat(document.getElementById("beta").value);
+        var direction_x = parseFloat(document.getElementById("boost_n_x").value);
+        var direction_y = parseFloat(document.getElementById("boost_n_y").value);
+        var direction_z = parseFloat(document.getElementById("boost_n_z").value);
+        var newframe_x = direction_x * velocity * time_change;
+        var newframe_y = direction_y * velocity * time_change;
+        var newframe_z = direction_z * velocity * time_change;
+
+        data.add({ id: 0, x: 0, y: 0, z: 0, style: 'green' });
+        data.add({ id: 1, x: x, y: y, z: z, style: 0 });
+        data.add({ id: 2, x: newframe_x, y: newframe_y, z: newframe_z, style: 0 });
+        data.add({ id: 3, x: x2, y: y2, z: z2, style: 0 });
+		var options = {
+			    style: 'line',
+			    showPerspective: true,
+			    showGrid: true,
+			    showShadow: false,
+			    keepAspectRatio: true,
+			    verticalRatio: 1,
+			    tooltip: true,
+			    zMin: -5,
+			    zMax: 5,
+			    yMin: -5,
+			    yMax: 5,
+			    xMin: -5,
+			    xMax: 5,
+		};
+        graph = new vis.Graph3d(document.getElementById('mygraph'), data, options);
+        vis.Graph3d._redrawDataLine();
     }
   </script>
 	<div id="title">
